@@ -4,6 +4,9 @@
   }
   h1 {
     font-size: 32px;
+    span {
+      font-size: 32px;
+    }
   }
   h2 {
     font-size: 19px;
@@ -22,6 +25,9 @@
   }
   h1 {
     font-size: 120px;
+    span {
+      font-size: 120px;
+    }
   }
   h2 {
     font-size: 44px;
@@ -45,5 +51,20 @@
   }
   p {
     color: $global-font-color;
+  }
+}
+
+@mixin pages-header-text {
+  display: flex;
+  gap: 1rem;
+  span {
+    color: $global-font-color;
+  }
+  p {
+    color: $global-font-color;
+    &:hover {
+      color: $white-background;
+      cursor: pointer;
+    }
   }
 }

@@ -8,23 +8,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
   * {
     width: auto;
-  }
-}
-
-.contact-header-p {
-  display: flex;
-  gap: 1rem;
-  span {
-    color: $global-font-color;
-  }
-  p {
-    color: $global-font-color;
-    &:hover {
-      color: $white-background;
-      cursor: pointer;
-    }
   }
 }
 
@@ -98,9 +84,8 @@ header {
     border: none;
     &:hover {
       cursor: pointer;
-      background-color: rgb(161, 15, 15);
-      color: #b1afaf;
-      border: 1px solid $global-font-color;
+      background-color: rgb(187, 25, 25);
+      color: #d1d0d0;
     }
   }
   input,

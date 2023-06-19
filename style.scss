@@ -1,6 +1,7 @@
 @import "sass/variables/variables.scss";
-@import "sass/layout/contactPage.scss";
 @import "sass/mixins/mixins.scss";
+@import "sass/layout/contactPage.scss";
+@import "sass/layout/roomsPage.scss";
 
 * {
   width: 100%;
@@ -16,4 +17,8 @@
 
 @media (max-width: 560px) {
   @include mobile;
+}
+
+.pages-header-text {
+  @include pages-header-text;
 }
