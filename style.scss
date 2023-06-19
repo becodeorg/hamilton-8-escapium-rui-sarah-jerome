@@ -1,0 +1,14 @@
+@import "sass/variables/variables.scss";
+@import "sass/layout/contactPage.scss";
+@import "sass/mixins/mixins.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @include headingColor;
+}
+
+@media (min-width: 1920px) {
+  @include tableAndDesktop;
+}

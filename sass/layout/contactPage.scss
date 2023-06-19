@@ -1,0 +1,94 @@
+header {
+  width: 100%;
+  min-height: 65vh;
+  background-image: url("img/gallery/slide-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-header-p {
+  display: flex;
+  gap: 1rem;
+  span {
+    color: $global-font-color;
+  }
+  p {
+    color: $global-font-color;
+    &:hover {
+      color: $white-background;
+      cursor: pointer;
+    }
+  }
+}
+
+.contact-container-form {
+  width: 100%;
+  display: flex;
+  padding: 10rem;
+  gap: 5rem;
+  justify-content: center;
+  background-color: $darkest-background;
+}
+
+.contact-info {
+  width: 20%;
+}
+
+.contact-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#contactForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  column-gap: 3rem;
+  row-gap: 3rem;
+  #name {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  #email {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  #comment {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  #submitButton {
+    color: $white-background;
+    background-color: $red;
+    font-weight: bold;
+    border-radius: 5rem;
+    font-size: 1.2rem;
+    height: 4rem;
+    grid-area: 3 / 1 / 4 / 3;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(161, 15, 15);
+      color: #b1afaf;
+      border: 1px solid $global-font-color;
+    }
+  }
+  input,
+  #comment {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: $global-font-color;
+    background-color: $darkest-background;
+    border: none;
+    border-bottom: 1px solid $global-font-color;
+  }
+}
+
+.contact-info-logos {
+  display: flex;
+}

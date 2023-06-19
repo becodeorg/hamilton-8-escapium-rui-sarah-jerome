@@ -3,26 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="style.css" />
     <title>Contact</title>
   </head>
-  <header></header>
   <body>
+    <header>
+      <h1>contacts<span>.</span></h1>
+      <div class="contact-header-p">
+        <p>HOME</p>
+        <span>-</span>
+        <p>CONTACTS</p>
+      </div>
+    </header>
     <!-- Menu nav to be added later-->
     <section class="contact-container-form">
       <article class="contact-info">
         <h2>Get in Touch</h2>
         <p>If you are interested in working with us, please get in touch.</p>
         <div class="contact-info-logos">
-          <i class="fa-regular fa-map-location-dot" style="color: #ffffff"></i>
+          <i class="fa-regular fa-map" style="color: #005cfa"></i>
           <p>2390 RoadHill St., Suite 100 North Downtown, NY 82153</p>
         </div>
         <div class="contact-info-logos">
-          <i class="fa-light fa-phone" style="color: #ffffff"></i>
+          <i class="fa-light fa-phone"></i>
           <p>+1800 900 1248</p>
         </div>
         <div class="contact-info-logos">
-          <i class="fa-solid fa-envelope" style="color: #ffffff"></i>
+          <i class="fa-solid fa-envelope"></i>
           <p>info@escapium.com</p>
         </div>
       </article>
@@ -36,8 +43,8 @@
             name="email"
             placeholder="Email Address"
           />
-          <textarea name="comment" form="contactForm">Your message...</textarea>
-          <button>Send Message</button>
+          <textarea name="comment" id="comment">Your message...</textarea>
+          <button id="submitButton">Send Message</button>
         </form>
       </article>
     </section>
