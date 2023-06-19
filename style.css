@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url("/img/gallery/slide-4.jpg");
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */
