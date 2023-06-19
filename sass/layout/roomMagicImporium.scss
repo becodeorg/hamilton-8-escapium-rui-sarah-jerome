@@ -1,0 +1,18 @@
+header {
+  background-image: url("/img/gallery/slide-2.jpg");
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.magic-imporium.roomPage {
+  width: 80%;
+  display: flex;
+}
+
+.roomPage-info-top {
+  display: flex;
+}
