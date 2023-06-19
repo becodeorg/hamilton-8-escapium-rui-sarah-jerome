@@ -1,5 +1,4 @@
 header {
-  width: 100%;
   min-height: 65vh;
   background-image: url("img/gallery/slide-1.jpg");
   background-repeat: no-repeat;
@@ -9,6 +8,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+header * {
+  width: auto;
 }
 
 .contact-header-p {
@@ -27,20 +29,42 @@ header {
 }
 
 .contact-container-form {
-  width: 100%;
   display: flex;
-  padding: 10rem;
+  padding: 10rem 0;
   gap: 5rem;
   justify-content: center;
   background-color: #1b1b1b;
 }
 
 .contact-info {
-  width: 20%;
+  max-width: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.contact-info-and-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+.contact-info-and-logo .contact-info-logos {
+  display: flex;
+  gap: 1.2rem;
+}
+.contact-info-and-logo .contact-info-logos p:hover {
+  cursor: pointer;
+  color: #fefefe;
 }
 
 .contact-form {
-  width: 50%;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -82,8 +106,8 @@ header {
 }
 #contactForm input,
 #contactForm #comment {
-  padding: 1rem 0;
-  font-size: 1.2rem;
+  height: 3rem;
+  font-size: 1.1rem;
   color: #717171;
   background-color: #1b1b1b;
   border: none;
@@ -95,6 +119,7 @@ header {
 }
 
 * {
+  width: 100%;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -109,8 +134,14 @@ header {
 * h3 span {
   color: #f60b0e;
 }
+* p {
+  color: #717171;
+}
 
 @media (min-width: 1920px) {
+  * {
+    font-size: 12px;
+  }
   h1 {
     font-size: 120px;
   }
@@ -122,6 +153,23 @@ header {
   }
   p {
     font-size: 16px;
+  }
+}
+@media (max-width: 560px) {
+  * {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 19px;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  p {
+    font-size: 14px;
   }
 }
 

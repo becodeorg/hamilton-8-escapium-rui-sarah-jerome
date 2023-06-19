@@ -1,4 +1,7 @@
 @mixin mobile {
+  * {
+    font-size: 10px;
+  }
   h1 {
     font-size: 32px;
   }
@@ -14,6 +17,9 @@
 }
 
 @mixin tableAndDesktop {
+  * {
+    font-size: 12px;
+  }
   h1 {
     font-size: 120px;
   }
@@ -36,5 +42,8 @@
     span {
       color: $red;
     }
+  }
+  p {
+    color: $global-font-color;
   }
 }

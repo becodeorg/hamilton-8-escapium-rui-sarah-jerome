@@ -1,5 +1,4 @@
 header {
-  width: 100%;
   min-height: 65vh;
   background-image: url("img/gallery/slide-1.jpg");
   background-repeat: no-repeat;
@@ -9,6 +8,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  * {
+    width: auto;
+  }
 }
 
 .contact-header-p {
@@ -27,20 +29,43 @@ header {
 }
 
 .contact-container-form {
-  width: 100%;
   display: flex;
-  padding: 10rem;
+  padding: 10rem 0;
   gap: 5rem;
   justify-content: center;
   background-color: $darkest-background;
 }
 
 .contact-info {
-  width: 20%;
+  max-width: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact-info-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.contact-info-and-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  .contact-info-logos {
+    display: flex;
+    gap: 1.2rem;
+    p {
+      &:hover {
+        cursor: pointer;
+        color: $white-background;
+      }
+    }
+  }
 }
 
 .contact-form {
-  width: 50%;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -80,8 +105,8 @@ header {
   }
   input,
   #comment {
-    padding: 1rem 0;
-    font-size: 1.2rem;
+    height: 3rem;
+    font-size: 1.1rem;
     color: $global-font-color;
     background-color: $darkest-background;
     border: none;

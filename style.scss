@@ -3,6 +3,7 @@
 @import "sass/mixins/mixins.scss";
 
 * {
+  width: 100%;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -11,4 +12,8 @@
 
 @media (min-width: 1920px) {
   @include tableAndDesktop;
+}
+
+@media (max-width: 560px) {
+  @include mobile;
 }
