@@ -1,18 +1,112 @@
-header {
+.header-singleRoom {
+  position: relative;
+  height: 70vh;
   background-image: url("/img/gallery/slide-2.jpg");
+  h1 {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+  }
 }
 
-main {
+.magic-imporium.roomPage {
+  padding: 5rem;
+  width: 65%;
+  display: flex;
+  gap: 2rem;
+  text-align: justify;
+}
+
+.roomPage-info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.roomPage-info-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roomPage-info-top-difficulty,
+.roomPage-info-top-players,
+.roomPage-info-top-time {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.7rem;
+
+  * {
+    width: auto;
+  }
+  p {
+    font-weight: bold;
+    color: $white-background;
+    // font-size: 1.4rem;
+  }
 }
-.magic-imporium.roomPage {
-  width: 80%;
+.roomPage-info-top-difficulty {
+  gap: 4;
+}
+.difficulty,
+.time-roomScape,
+.number-players {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  i {
+    color: rgb(209, 209, 209);
+    // font-size: 1.5rem;
+  }
+  p {
+    // font-size: 2rem;
+    color: rgb(141, 140, 140);
+  }
 }
 
-.roomPage-info-top {
+.roomPage-info-top-difficulty,
+.roomPage-info-top-players {
+  border-right: 1px solid $global-font-color;
+}
+
+.roomPage-BookNow {
+  width: 30%;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  i {
+    color: rgb(209, 209, 209);
+  }
+  p {
+    &:hover {
+      cursor: pointer;
+      color: rgb(209, 209, 209);
+    }
+  }
+  button {
+    margin-top: 2rem;
+    width: 50%;
+    font-weight: bold;
+    background-color: $red;
+    border: none;
+    color: $white-background;
+    border-radius: 5rem;
+    padding: 2rem;
+  }
+}
+
+.bookNow-number,
+.bookNow-email,
+.bookNow-skype,
+.bookNow-location {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  * {
+    width: auto;
+  }
 }
