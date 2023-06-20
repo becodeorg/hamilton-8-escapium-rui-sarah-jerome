@@ -210,7 +210,7 @@ main {
   border: none;
   color: #fefefe;
   border-radius: 5rem;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
 }
 .roomPage-BookNow button:hover {
   cursor: pointer;
