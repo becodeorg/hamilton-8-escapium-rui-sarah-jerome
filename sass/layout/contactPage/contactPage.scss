@@ -1,6 +1,28 @@
-.contactPage-header {
+@import "../../variables/variables.scss";
+@import "../../mixins/mixins.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @include headingColor;
+}
+
+@media (min-width: 1920px) {
+  @include tableAndDesktop;
+}
+
+@media (max-width: 560px) {
+  @include mobile;
+}
+
+.pages-header-text {
+  @include pages-header-text;
+}
+
+header {
   min-height: 65vh;
-  background-image: url("img/gallery/slide-1.jpg");
+  background-image: url("/img/gallery/slide-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;

@@ -306,11 +306,6 @@ main {
   height: 70vh;
   background-image: url("/img/gallery/slide-2.jpg");
 }
-.header-singleRoom h1 {
-  position: absolute;
-  bottom: 10%;
-  left: 15%;
-}
 
 .magic-imporium.roomPage {
   padding: 5rem;
@@ -378,6 +373,10 @@ main {
   color: rgb(141, 140, 140);
 }
 
+.difficulty {
+  gap: 0.5rem;
+}
+
 .roomPage-info-top-difficulty,
 .roomPage-info-top-players {
   border-right: 1px solid #717171;
@@ -398,13 +397,13 @@ main {
 }
 .roomPage-BookNow button {
   margin-top: 2rem;
-  width: 50%;
+  width: 10rem;
   font-weight: bold;
   background-color: #f60b0e;
   border: none;
   color: #fefefe;
   border-radius: 5rem;
-  padding: 2rem;
+  padding: 1rem 1.5rem;
 }
 
 .bookNow-number,

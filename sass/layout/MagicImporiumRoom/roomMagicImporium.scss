@@ -1,12 +1,29 @@
+@import "../../variables/variables.scss";
+@import "../../mixins/mixins.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @include headingColor;
+}
+
+@media (min-width: 1920px) {
+  @include tableAndDesktop;
+}
+
+@media (max-width: 560px) {
+  @include mobile;
+}
+
+.pages-header-text {
+  @include pages-header-text;
+}
+
 .header-singleRoom {
   position: relative;
   height: 70vh;
   background-image: url("/img/gallery/slide-2.jpg");
-  h1 {
-    position: absolute;
-    bottom: 10%;
-    left: 15%;
-  }
 }
 
 .magic-imporium.roomPage {
@@ -68,6 +85,10 @@
   }
 }
 
+.difficulty {
+  gap: 0.5rem;
+}
+
 .roomPage-info-top-difficulty,
 .roomPage-info-top-players {
   border-right: 1px solid $global-font-color;
@@ -89,13 +110,13 @@
   }
   button {
     margin-top: 2rem;
-    width: 50%;
+    width: 10rem;
     font-weight: bold;
     background-color: $red;
     border: none;
     color: $white-background;
     border-radius: 5rem;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
   }
 }
 

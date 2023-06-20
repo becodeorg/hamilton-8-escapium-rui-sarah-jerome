@@ -1,11 +1,10 @@
-@import "sass/variables/variables.scss";
-@import "sass/mixins/mixins.scss";
-@import "sass/layout/contactPage.scss";
-@import "sass/layout/roomsPage.scss";
-@import "sass/layout/roomMagicImporium.scss";
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+@import "layout/contactPage.scss";
+@import "layout/roomsPage.scss";
+@import "layout/roomMagicImporium.scss";
 
 * {
-  width: 100%;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
