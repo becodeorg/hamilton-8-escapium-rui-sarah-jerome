@@ -8,7 +8,7 @@
   @include headingColor;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 800px) {
   @include tableAndDesktop;
 }
 
@@ -20,54 +20,65 @@
   @include pages-header-text;
 }
 
-.header-singleRoom {
+header {
   position: relative;
   height: 70vh;
   background-image: url("/img/gallery/slide-2.jpg");
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #222222, rgba(0, 0, 0, 0.116));
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $darkest-background;
+  padding: 5rem 0;
 }
 
 .magic-imporium.roomPage {
-  padding: 5rem;
-  width: 65%;
+  width: 70%;
   display: flex;
   gap: 2rem;
   text-align: justify;
 }
 
 .roomPage-info {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 5rem;
 }
 .roomPage-info-top {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .roomPage-info-top-difficulty,
 .roomPage-info-top-players,
 .roomPage-info-top-time {
+  width: calc(100% - 66%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.7rem;
 
-  * {
-    width: auto;
-  }
   p {
     font-weight: bold;
     color: $white-background;
-    // font-size: 1.4rem;
   }
 }
-.roomPage-info-top-difficulty {
-  gap: 4;
-}
+
 .difficulty,
 .time-roomScape,
 .number-players {
@@ -77,10 +88,8 @@
   gap: 1.2rem;
   i {
     color: rgb(209, 209, 209);
-    // font-size: 1.5rem;
   }
   p {
-    // font-size: 2rem;
     color: rgb(141, 140, 140);
   }
 }
@@ -127,7 +136,110 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+.others-rooms {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.others-rooms-titleAndButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  button {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $white-background;
+    background-color: $darkest-background;
+    border: 3px solid $global-font-color;
+    border-radius: 50%;
+    padding: 1rem 2rem;
+    &:hover {
+      cursor: pointer;
+      background-color: $dark-background;
+    }
+  }
+}
+
+.other-rooms-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.otherRoom {
+  position: relative;
+  width: 30%;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   * {
-    width: auto;
+    z-index: 1000;
+    color: $white-background;
+  }
+}
+.hospital {
+  background-image: url("/img/gallery/room-5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+  }
+}
+
+.outside {
+  background-image: url("/img/gallery/gallery-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+  }
+}
+
+.timeTravel {
+  background-image: url("/img/gallery/room-9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+  }
+}
+
+.roomInfos {
+  display: flex;
+  justify-content: space-evenly;
+  .roomPlayers,
+  .roomTime,
+  .roomLocation {
+    display: flex;
+
+    align-items: center;
   }
 }
