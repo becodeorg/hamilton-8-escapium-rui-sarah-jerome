@@ -253,13 +253,17 @@
 
         .BlogsPageSection2ArticlesComments {
 
+            width: 85%;
+            margin-left: 7.5%;
+
             h1 {
                 font-size: 28px;
                 font-family: "Montserrat";
                 font-weight: 500;
                 color: $White-background;
                 text-align: start;
-                margin-bottom: 15%;
+                margin-top: 10%;
+                margin-bottom: 10%;
                 position: relative;
 
                 &::after {
@@ -268,10 +272,10 @@
                     font-family: "Hind";
                     position: absolute;
                     font-weight: 500;
-                    top: 150%;
+                    top: 60px;
                     left: 0%;
                     transform: translate(-50%, -50%);
-                    width: 10%;
+                    width: 7.5%;
                     height: 3px;
                     background-color: $Global-font-color;
                     opacity: 0.5;
@@ -281,12 +285,92 @@
 
             .BlogsPageSection2ArticlesComment {
 
+                margin-bottom: 7.5%;
 
-                img {
-                    width: 70px;
-                    height: auto;
-                    border-radius: 50px;
+                .BlogsPageSection2ArticlesCommentsProfil {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 2.5%;
+
+                    img {
+                        width: 70px;
+                        height: auto;
+                        border-radius: 50px;
+                        margin-right: 2.5%;
+                    }
+
+                    .BlogsPageSection2ArticlesCommentsProfilName {
+
+                        h3 {
+                            font-size: 16px;
+                            font-family: "Montserrat";
+                            font-weight: 500;
+                            color: $White-background;
+                            text-align: start;
+                        }
+
+                        h4 {
+                            font-size: 11px;
+                            font-family: "Montserrat";
+                            font-weight: 500;
+                            color: $Global-font-color;
+                            text-align: start;
+                        }
+                    }
+
                 }
+
+                p {
+                    font-size: 11px;
+                    font-family: "Montserrat";
+                    font-weight: 500;
+                    color: $Global-font-color;
+                    text-align: start;
+                }
+
+                h6 {
+                    font-size: 9px;
+                    font-family: "Hind";
+                    font-weight: 500;
+                    color: $Global-font-color;
+                    letter-spacing: 3px;
+                    text-align: start; 
+                    margin-top: 2.5%;
+                }
+            }
+
+            .BlogsPageSection2ArticlesComment:nth-child(4) {
+
+                margin-left: 10%;
+
+            }
+
+            .BlogsPageSection2ArticlesComment:nth-child(5) {
+                
+                margin-left: 10%;
+                border-left: 3px red solid;
+
+
+                .BlogsPageSection2ArticlesCommentsProfil {
+                    margin-left: 7.5%;
+                }
+
+                p {
+                    margin-left: 7.5%;
+                }
+
+                h6 {
+                    margin-left: 7.5%;
+                }
+
+            }
+
+            .BlogsPageSection2ArticlesComment:nth-child(6) {
+
+                margin-bottom: 0%;
 
             }
 
@@ -770,30 +854,32 @@ Footer {
                     }
               }
         }
+
+        .FooterCopyright {
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+            border-top: 2px #434343 solid;
+    
+            img {
+                margin-top: 2.5%;
+                margin-bottom:2.5%;
+            }
+    
+            p {
+                font-size: 11px;
+                font-family: "Montserrat";
+                font-weight: 600;
+                color: $Global-font-color;
+            }
+        }
     }
 
 
-    .FooterCopyright {
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0.5;
-        border-top: 2px #434343 solid;
 
-        img {
-            margin-top: 2.5%;
-            margin-bottom:2.5%;
-        }
-
-        p {
-            font-size: 11px;
-            font-family: "Montserrat";
-            font-weight: 600;
-            color: $Global-font-color;
-        }
-    }
 

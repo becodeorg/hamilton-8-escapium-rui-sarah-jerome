@@ -251,13 +251,18 @@ td, th {
   font-size: 13px;
   text-align: justify;
 }
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments {
+  width: 85%;
+  margin-left: 7.5%;
+}
 .BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments h1 {
   font-size: 28px;
   font-family: "Montserrat";
   font-weight: 500;
   color: #fefefe;
   text-align: start;
-  margin-bottom: 15%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   position: relative;
 }
 .BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments h1::after {
@@ -266,18 +271,78 @@ td, th {
   font-family: "Hind";
   position: absolute;
   font-weight: 500;
-  top: 150%;
+  top: 60px;
   left: 0%;
   transform: translate(-50%, -50%);
-  width: 10%;
+  width: 7.5%;
   height: 3px;
   background-color: #717171;
   opacity: 0.5;
 }
-.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment img {
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment {
+  margin-bottom: 7.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment .BlogsPageSection2ArticlesCommentsProfil {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment .BlogsPageSection2ArticlesCommentsProfil img {
   width: 70px;
   height: auto;
   border-radius: 50px;
+  margin-right: 2.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment .BlogsPageSection2ArticlesCommentsProfil .BlogsPageSection2ArticlesCommentsProfilName h3 {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #fefefe;
+  text-align: start;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment .BlogsPageSection2ArticlesCommentsProfil .BlogsPageSection2ArticlesCommentsProfilName h4 {
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #717171;
+  text-align: start;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment p {
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #717171;
+  text-align: start;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment h6 {
+  font-size: 9px;
+  font-family: "Hind";
+  font-weight: 500;
+  color: #717171;
+  letter-spacing: 3px;
+  text-align: start;
+  margin-top: 2.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment:nth-child(4) {
+  margin-left: 10%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment:nth-child(5) {
+  margin-left: 10%;
+  border-left: 3px red solid;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment:nth-child(5) .BlogsPageSection2ArticlesCommentsProfil {
+  margin-left: 7.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment:nth-child(5) p {
+  margin-left: 7.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment:nth-child(5) h6 {
+  margin-left: 7.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments .BlogsPageSection2ArticlesComment:nth-child(6) {
+  margin-bottom: 0%;
 }
 
 .BlogsPageSecion2Infos {
@@ -673,8 +738,7 @@ Footer .Footercolumns:nth-child(4) .Footerdash::after {
   width: 50%;
   color: #717171;
 }
-
-.FooterCopyright {
+Footer .FooterCopyright {
   width: 100%;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -685,11 +749,11 @@ Footer .Footercolumns:nth-child(4) .Footerdash::after {
   opacity: 0.5;
   border-top: 2px #434343 solid;
 }
-.FooterCopyright img {
+Footer .FooterCopyright img {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
 }
-.FooterCopyright p {
+Footer .FooterCopyright p {
   font-size: 11px;
   font-family: "Montserrat";
   font-weight: 600;
