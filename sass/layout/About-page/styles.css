@@ -1,0 +1,572 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+.AboutPageSection1 {
+  background-image: url("https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/slide-1.jpg?raw=true");
+  background-size: cover;
+  background-position: center 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.AboutPageSection1 h2 {
+  font-size: 44px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #fefefe;
+  margin-bottom: 10px;
+}
+.AboutPageSection1 li {
+  display: inline;
+  font-size: 16px;
+  font-family: "Hind";
+}
+.AboutPageSection1 a {
+  text-decoration: none;
+  color: #717171;
+}
+.AboutPageSection1 a:hover {
+  color: #fefefe;
+}
+
+.AboutPageSection2 {
+  background-color: #1B1B1B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+.AboutPageSection2 h2 {
+  font-size: 44px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #fefefe;
+}
+.AboutPageSection2 h3 {
+  font-size: 32px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #fefefe;
+  text-align: center;
+}
+.AboutPageSection2 p {
+  font-size: 16px;
+  font-family: "Hind";
+  font-weight: 400;
+  color: #717171;
+}
+.AboutPageSection2 .fa-minus {
+  font-size: 30px;
+  margin-bottom: 2.5%;
+}
+.AboutPageSection2 .AboutPageSection2Instructions {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 5%;
+}
+.AboutPageSection2 .AboutPageSection2Instructions .AboutPageSection2InstructionsCard {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AboutPageSection2 .AboutPageSection2Instructions .AboutPageSection2InstructionsCard p {
+  text-align: center;
+  margin-top: 5%;
+}
+.AboutPageSection2 .AboutPageSection2Instructions .InstructionsLogo {
+  position: relative;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #fefefe solid;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15%;
+  z-index: 0;
+}
+.AboutPageSection2 .AboutPageSection2Instructions .InstructionsLogo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 175%;
+  height: 1px;
+  background-color: #fefefe;
+  z-index: -1;
+  overflow: hidden;
+}
+.AboutPageSection2 .AboutPageSection2Instructions .InstructionsLogo i {
+  font-size: 45px;
+}
+
+.AboutPageSection4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1B1B1B;
+}
+.AboutPageSection4 .fa-minus {
+  font-size: 30px;
+  margin-top: 7.5%;
+  margin-bottom: 2.5%;
+}
+.AboutPageSection4 h2 {
+  font-size: 44px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #fefefe;
+}
+.AboutPageSection4 .AboutPageSection4Certificates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.AboutPageSection4 .AboutPageSection4Certificates .Certificate {
+  width: 23%;
+}
+
+.AboutPageSection5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222222;
+}
+.AboutPageSection5 .fa-minus {
+  font-size: 30px;
+  margin-bottom: 2.5%;
+  margin-top: 7.5%;
+}
+.AboutPageSection5 h2 {
+  font-size: 44px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #fefefe;
+}
+.AboutPageSection5 h3 {
+  font-size: 32px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #fefefe;
+}
+.AboutPageSection5 p {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #777;
+}
+.AboutPageSection5 .AboutPageSection5OurTeam {
+  width: 70%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.AboutPageSection5 .AboutPageSection5OurTeam .AboutPageSection5OurTeamMember {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AboutPageSection5 .AboutPageSection5OurTeam .AboutPageSection5OurTeamMember .Section5TeamMemberName {
+  margin-top: 5%;
+  flex-direction: column;
+  width: 90%;
+  display: flex;
+  justify-content: start;
+}
+
+.AboutPageSection6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1B1B1B;
+}
+.AboutPageSection6 .fa-minus {
+  font-size: 16px;
+  margin-top: 7.5%;
+  margin-bottom: 2.5%;
+}
+.AboutPageSection6 h2 {
+  font-size: 32px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #fefefe;
+}
+.AboutPageSection6 a {
+  color: #F60B0E;
+  margin-top: 2%;
+  font-family: "Hind";
+}
+.AboutPageSection6 .AboutPageSection6Carousel {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.AboutPageSection6 .AboutPageSection6Carousel ul {
+  margin-top: 2.5%;
+  margin-bottom: 7.5%;
+}
+.AboutPageSection6 .AboutPageSection6Carousel li {
+  display: inline;
+  font-size: 30px;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .fa-arrow-left-long {
+  margin-right: 75px;
+  position: relative;
+  z-index: 0;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .fa-arrow-left-long::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 235%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 220%;
+  height: 1px;
+  background-color: #717171;
+  z-index: -1;
+  overflow: hidden;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide {
+  margin-top: 7.5%;
+  margin-bottom: 7.5%;
+  width: 47.5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #717171;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide p {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide img {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.AboutPageSection7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefefe;
+}
+.AboutPageSection7 .fa-minus {
+  font-size: 30px;
+  margin-top: 7.5%;
+  margin-bottom: 2.5%;
+}
+.AboutPageSection7 h2 {
+  font-size: 32px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #1B1B1B;
+}
+.AboutPageSection7 p {
+  color: #717171;
+  font-size: 11px;
+  margin-top: 2%;
+  font-family: "Hind";
+}
+.AboutPageSection7 .AboutPageSection7FAQs {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AboutPageSection7 .AboutPageSection7cards {
+  margin-top: 2.5%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.AboutPageSection7 .AboutPageSection7cards h3 {
+  font-size: 20px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #1B1B1B;
+}
+.AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus {
+  background-color: #dedede;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+.AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 50%;
+  height: 2px;
+  background-color: #a1a1a1;
+  z-index: 1;
+  overflow: hidden;
+}
+.AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 2px;
+  background-color: #a1a1a1;
+  z-index: 2;
+  overflow: hidden;
+}
+.AboutPageSection7 .AboutPageSection7QA {
+  width: 85%;
+}
+
+Footer {
+  background-image: url("https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/Room7-Dark.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+Footer .FooterInfos {
+  margin-top: 5%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: 1px white solid;
+}
+Footer .Footercolumns {
+  width: 23%;
+}
+Footer .Footercolumns h1 {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #fefefe;
+  margin-bottom: 7.5%;
+}
+Footer .Footercolumns li {
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #717171;
+}
+Footer .Footercolumns:nth-child(1) li {
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+Footer .Footercolumns:nth-child(1) .Footerdash {
+  font-size: x-large;
+  opacity: 0.5;
+  position: relative;
+}
+Footer .Footercolumns:nth-child(1) .Footerdash::after {
+  content: "01";
+  font-size: 16px;
+  font-family: "Hind";
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #717171;
+}
+Footer .Footercolumns:nth-child(2) li {
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+Footer .Footercolumns:nth-child(2) .Footerdash {
+  font-size: x-large;
+  opacity: 0.5;
+  position: relative;
+}
+Footer .Footercolumns:nth-child(2) .Footerdash::after {
+  content: "02";
+  font-size: 16px;
+  font-family: "Hind";
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #717171;
+}
+Footer .Footercolumns:nth-child(3) li {
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+Footer .Footercolumns:nth-child(3) .FooterWorkingHours {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+Footer .Footercolumns:nth-child(3) .FooterWorkingHours .FooterWorkingHoursDays:nth-child(1) {
+  width: 45%;
+}
+Footer .Footercolumns:nth-child(3) .FooterWorkingHours .FooterWorkingHoursDays:nth-child(2) {
+  width: 45%;
+}
+Footer .Footercolumns:nth-child(3) .Footerdash {
+  font-size: x-large;
+  opacity: 0.5;
+  position: relative;
+}
+Footer .Footercolumns:nth-child(3) .Footerdash::after {
+  content: "03";
+  font-size: 16px;
+  font-family: "Hind";
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #717171;
+}
+Footer .Footercolumns:nth-child(4) ul {
+  display: flex;
+  flex-direction: row;
+}
+Footer .Footercolumns:nth-child(4) .FooterSocialMedia {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #717171;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+Footer .Footercolumns:nth-child(4) .Footerdash {
+  font-size: x-large;
+  opacity: 0.5;
+  position: relative;
+}
+Footer .Footercolumns:nth-child(4) .Footerdash::after {
+  content: "04";
+  font-size: 16px;
+  font-family: "Hind";
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #717171;
+}
+
+.FooterCopyright {
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  border-top: 2px #434343 solid;
+}
+.FooterCopyright img {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+.FooterCopyright p {
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #717171;
+}
+
+/*# sourceMappingURL=styles.css.map */
