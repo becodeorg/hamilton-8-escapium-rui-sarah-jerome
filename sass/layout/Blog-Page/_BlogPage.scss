@@ -22,6 +22,11 @@
         margin-bottom: 10px;
     }
 
+    ol {
+        display: flex;
+        flex-direction: row;
+    }
+
     li {
         display:inline;
         font-size: 16px;
@@ -55,6 +60,7 @@
     background-color: $Darkest-background;
 
     .BlogsPageSection2All {
+        
         margin-bottom: 10%;
         display: flex;
         flex-direction: row;
@@ -64,6 +70,7 @@
     }
 
     .BlogsPageSection2Articles {
+
         width: 67.5%;
         display: flex;
         justify-content: flex-start;
@@ -115,46 +122,52 @@
                 }
 
 
-            h1 {
-                font-size: 32px;
-                font-family: "Montserrat";
-                font-weight: 600;
-                color: $White-background;
-                text-align: start;
-                margin-bottom: 7.5%;
+                h1 {
+                    font-size: 32px;
+                    font-family: "Montserrat";
+                    font-weight: 600;
+                    color: $White-background;
+                    text-align: start;
+                    margin-bottom: 7.5%;
+                }
+
+                p {
+                    margin-right: 20px ;
+                    color: $Global-font-color;
+                    font-family: "Montserrat";
+                    font-size: 13px; 
+                    width: 100%;
+                    text-align: justify;
+                    margin-bottom: 7.5%;
+                }
+
+                ol {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
             }
 
-            p {
-                margin-right: 20px ;
-                color: $Global-font-color;
-                font-family: "Montserrat";
-                font-size: 13px; 
-                width: 100%;
-                text-align: justify;
-                margin-bottom: 7.5%;
-            }
+                Button {
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                    margin-bottom: 10px;
+                    height: 25px;
+                    width: 80px;
+                    border-radius: 25px;
+                    background-color: $Darkest-background;
+                    border: 1px solid $Global-font-color;
+                    color: $White-background;
+                    font-size: 11px;
+                    font-family: "Montserrat";
+                    font-weight: 700;
 
-            ul {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-            }
-
-            Button {
-                margin-right: 10px;
-                margin-bottom: 0;
-                margin-bottom: 10px;
-                height: 25px;
-                width: 80px;
-                border-radius: 25px;
-                background-color: $Darkest-background;
-                border: 1px solid $Global-font-color;
-                color: $White-background;
-                font-size: 11px;
-                font-family: "Montserrat";
-                font-weight: 700;
-
-            }
+                }
             }
                 
             }
@@ -195,6 +208,43 @@
                 align-items: center;
                 padding: 10% 0 10% 0;
                 position: relative;
+
+                .BlogsPageSection2ArticlesCommentsProfil {
+
+                    display: none;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 2.5%;
+
+                    img {
+                        width: 70px;
+                        height: auto;
+                        border-radius: 50px;
+                        margin-right: 2.5%;
+                    }
+
+                    .BlogsPageSection2ArticlesCommentsProfilName {
+
+                        h3 {
+                            font-size: 16px;
+                            font-family: "Montserrat";
+                            font-weight: 500;
+                            color: $White-background;
+                            text-align: start;
+                        }
+
+                        h4 {
+                            font-size: 11px;
+                            font-family: "Montserrat";
+                            font-weight: 500;
+                            color: $Global-font-color;
+                            text-align: start;
+                        }
+                    }
+
+                }
+
     
                 .FirstCommentNameIcones {
                     width: 80%;
@@ -376,12 +426,12 @@
 
         }
 
-
         }
 
     }
 
     .BlogsPageSecion2Infos {
+
         width: 27.5%;
 
             .BlogsPageSecion2InfosCat {
@@ -677,7 +727,6 @@
 
         }
 
-
 Footer {
     @include background-img-cover-center("https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/Room7-Dark.png?raw=true");
     background-color: $Dark-background;
@@ -879,6 +928,455 @@ Footer {
             }
         }
     }
+
+@media (max-width: 768px) {
+
+    .BlogsPageSection2 {
+
+        .BlogsPageSection2All {
+            
+            .BlogsPageSection2Articles {
+
+                width: 70%;
+    
+                .BlogsPageSection2ArticlesDoubleCards {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+
+                    .BlogsPageSection2ArticlesCardImg {
+                        height: 275px;
+                    }
+
+                    .BlogsPageSection2ArticlesCardText {
+                        margin-left: 0;
+                        margin-top: 0;
+                        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+                        margin-right: 0;
+
+                        .BlogsPageSection2ArticlesCardTextContent {
+                            ol {
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                }
+
+                .BlogsPageSection2ArticlesFirstCommentBackground {
+                    
+                    .BlogsPageSection2ArticlesFirstCommentText {
+
+                        align-items: flex-start;
+                        padding-left: 5%;
+
+                        p {
+                            width: 95%;
+                        }
+
+                        .FirstCommentNameIcones {
+                            display: none;
+                        }
+
+                        .BlogsPageSection2ArticlesCommentsProfil {
+                            display: flex;
+                            width: 100%;
+
+
+                            img {
+                                margin-right: 5%;
+                            }
+
+                            ul {
+                                width: 40%;
+                                display: flex;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                margin-right: 5%;
+
+                            }
+                        }
+                    }
+
+                    .FirstCommentProfilPicture {
+                        display: none;
+                    }
+
+                }
+
+            }
+
+            .BlogsPageSecion2Infos {
+                width: 30%;
+
+                    .BlogsPageSecion2InfosCat {
+                        h1 {
+                            font-size: 22px;
+                        }
+
+                        li {
+
+                            font-weight: 600;
+                        }
+                    }
+                    
+                    .BlogsPageSecion2InfosPop {
+                        h1 {
+                            font-size: 22px;
+                        }
+
+                        .BlogsPageSecion2InfosPopContainer {
+                            
+                            width:auto;
+                            .BlogsPageSecion2InfosPopCards {
+                                
+                                p {
+                                    width: 40%;
+
+                                    &::after {
+                                        content: "";
+                                        
+                                        left: 125%;
+                                        width: 20%;
+                                        }
+                                }
+
+                                h2 {
+                                    width: 60%;
+                                    font-size: 11px;
+                                    margin-left: 20%;
+                                }
+                            }
+                        }
+                    }
+    
+                    .BlogsPageSecion2InfosTags {
+                        h1 {
+                            font-size: 22px;
+                        }
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            }
+
+                        button {
+                            width: 60%;
+                        }
+                    }
+
+                    .BlogsPageSecion2InfosPhoto {
+
+                        h1 {
+                            font-size: 22px;
+                        }
+
+                        .BlogsPageSecion2InfosPhotoImg {
+                        height: 100px;
+                        width: 100px;
+                        }
+
+                        .BlogsPageSecion2InfosPhotoGrid {
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: repeat(3, 1fr);
+                        }
+                    }
+
+                    .BlogsPageSecion2InfosArchive {
+                        h1 {
+                            font-size: 22px;
+                        }
+                    }
+
+                }
+        }
+    }
+
+    Footer {
+        .FooterInfos {
+        width: 90%;
+        }
+
+        .Footercolumns {
+            width: 23%;
+        }
+
+        .Footercolumns:nth-child(3) {
+
+                .FooterWorkingHoursDays:nth-child(1) {
+                    line-height: 145%;
+                }
+
+                .FooterWorkingHoursDays:nth-child(2) {
+                    width: 45%;
+                    margin-left: 20%;
+                }
+        
+            }
+
+        .Footercolumns:nth-child(4) {
+            .FooterSocialMedia {
+                width: 25px;
+                height: 25px;
+                font-size: medium;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+
+    .BlogsPageSection1 {
+        h2 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        ol {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li {
+            display:inline-block;
+            font-size: 11px;
+            font-family: "Hind";
+            color: $Global-font-color;
+
+        i {
+            margin-right: 6px;
+            font-size: medium;
+        }
+
+        .CardTextContentinfos {
+            margin-right: 20px ;
+            color: $Global-font-color;
+            font-family: "Montserrat";
+            font-size: 11px;
+            font-weight: 700;
+
+        }
+    }
+    }
+
+    .BlogsPageSection2 {
+
+        .BlogsPageSection2All {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .BlogsPageSection2Articles {
+
+            width: 100%;
+
+
+                .BlogsPageSection2ArticlesDoubleCards {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                    .BlogsPageSection2ArticlesCardImg {
+                    height: 275px;
+                    }
+
+                    .BlogsPageSection2ArticlesCardText {
+                        
+                        margin-left: 0;
+                        margin-top: 0;
+                        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+                        margin-right: 0;
+
+                        .BlogsPageSection2ArticlesCardTextContent {
+
+                            ol {
+                                flex-direction: column;
+                            }
+
+                        }
+                    }
+
+                }
+
+                .BlogsPageSection2ArticlesFirstCommentBackground {
+                   
+                    .BlogsPageSection2ArticlesFirstCommentText {
+
+                        align-items: flex-start;
+                        padding-left: 5%;
+
+                        p {
+                            width: 95%;
+                        }
+
+                        .FirstCommentNameIcones {
+                            display: none;
+                        }
+
+                        .BlogsPageSection2ArticlesCommentsProfil {
+                            display: flex;
+                            width: 100%;
+
+
+                            img {
+                                margin-right: 5%;
+                            }
+
+                            ul {
+                                width: 40%;
+                                display: flex;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                margin-right: 5%;
+
+                            }
+                        }
+                    }
+
+                    .FirstCommentProfilPicture {
+                        display: none;
+                    }
+
+                }
+
+                .BlogsPageSection2ArticlesComments {
+            
+                h1::after {
+                    top: 50px;
+                }
+
+                }
+            }
+
+            .BlogsPageSecion2Infos {
+            width: 80%;
+
+            .BlogsPageSecion2InfosPop {
+            
+                margin-top: 15%;
+
+                h1 {
+                    font-size: 32px;
+                    font-family: "Montserrat";
+                    font-weight: 500;
+                    color: $White-background;
+                    text-align: center;
+                    text-align: start;
+                    margin-bottom: 15%;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        font-size: 16px;
+                        font-family: "Hind";
+                        position: absolute;
+                        font-weight: 500;
+                        top: 150%;
+                        left: 0%;
+                        transform: translate(-50%, -50%);
+                        width: 10%;
+                        height: 3px;
+                        background-color: $Global-font-color;
+                        opacity: 0.5;
+                        }
+
+                }
+
+                .BlogsPageSecion2InfosPopContainer {
+                    width: 90%;
+
+                    .BlogsPageSecion2InfosPopCards {
+
+        
+                        p {
+                            width: 30%;
+                            font-size: 11px;
+                            color: $Global-font-color;
+                            position: relative;
+
+                            &::after {
+                                content: "";
+                                font-size: 16px;
+                                font-family: "Hind";
+                                position: absolute;
+                                font-weight: 500;
+                                top: 50%;
+                                left: 85%;
+                                transform: translate(-50%, -50%);
+                                width: 25%;
+                                height: 1px;
+                                background-color: $Global-font-color;
+                                opacity: 0.5;
+                                }
+
+                        }
+        
+                        h2 {
+                            width: 60%;
+                            font-size: 16px;
+                            font-family: "Montserrat";
+                            font-weight: 500;
+                            color: $White-background;
+        
+                        }
+                    }
+                }
+
+
+
+            }
+
+            .BlogsPageSecion2InfosTags {
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    }
+                
+                button {
+   
+                    width: 90%;
+
+                }
+            }
+
+                .BlogsPageSecion2InfosPhoto {
+                    .BlogsPageSecion2InfosPhotoImg {
+                    height: 100px;
+                    width: 100px;
+                    }
+                    .BlogsPageSecion2InfosPhotoGrid {
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows: repeat(2, 1fr);
+                    }
+                }
+            }
+
+        }
+    }
+
+    Footer {
+
+        .FooterInfos {
+            flex-direction: column;
+
+            .Footercolumns {
+                width: 75%;
+                margin-bottom: 10%;
+            }
+        }
+    }
+}
+
 
 
 

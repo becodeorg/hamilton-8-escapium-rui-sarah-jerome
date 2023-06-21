@@ -62,6 +62,10 @@ td, th {
   color: #fefefe;
   margin-bottom: 10px;
 }
+.BlogsPageSection1 ol {
+  display: flex;
+  flex-direction: row;
+}
 .BlogsPageSection1 li {
   display: inline;
   font-size: 16px;
@@ -155,6 +159,11 @@ td, th {
   text-align: justify;
   margin-bottom: 7.5%;
 }
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards .BlogsPageSection2ArticlesCardText .BlogsPageSection2ArticlesCardTextContent ol {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 .BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards .BlogsPageSection2ArticlesCardText .BlogsPageSection2ArticlesCardTextContent ul {
   display: flex;
   flex-direction: row;
@@ -205,6 +214,33 @@ td, th {
   align-items: center;
   padding: 10% 0 10% 0;
   position: relative;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil img {
+  width: 70px;
+  height: auto;
+  border-radius: 50px;
+  margin-right: 2.5%;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil .BlogsPageSection2ArticlesCommentsProfilName h3 {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #fefefe;
+  text-align: start;
+}
+.BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil .BlogsPageSection2ArticlesCommentsProfilName h4 {
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #717171;
+  text-align: start;
 }
 .BlogsPageSection2 .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .FirstCommentNameIcones {
   width: 80%;
@@ -758,6 +794,236 @@ Footer .FooterCopyright p {
   font-family: "Montserrat";
   font-weight: 600;
   color: #717171;
+}
+
+@media (max-width: 768px) {
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles {
+    width: 70%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards .BlogsPageSection2ArticlesCardImg {
+    height: 275px;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards .BlogsPageSection2ArticlesCardText {
+    margin-left: 0;
+    margin-top: 0;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+    margin-right: 0;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards .BlogsPageSection2ArticlesCardText .BlogsPageSection2ArticlesCardTextContent ol {
+    flex-direction: column;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText {
+    align-items: flex-start;
+    padding-left: 5%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText p {
+    width: 95%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .FirstCommentNameIcones {
+    display: none;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil {
+    display: flex;
+    width: 100%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil img {
+    margin-right: 5%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil ul {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 5%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .FirstCommentProfilPicture {
+    display: none;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos {
+    width: 30%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosCat h1 {
+    font-size: 22px;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosCat li {
+    font-weight: 600;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop h1 {
+    font-size: 22px;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop .BlogsPageSecion2InfosPopContainer {
+    width: auto;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop .BlogsPageSecion2InfosPopContainer .BlogsPageSecion2InfosPopCards p {
+    width: 40%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop .BlogsPageSecion2InfosPopContainer .BlogsPageSecion2InfosPopCards p::after {
+    content: "";
+    left: 125%;
+    width: 20%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop .BlogsPageSecion2InfosPopContainer .BlogsPageSecion2InfosPopCards h2 {
+    width: 60%;
+    font-size: 11px;
+    margin-left: 20%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosTags h1 {
+    font-size: 22px;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosTags ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosTags button {
+    width: 60%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPhoto h1 {
+    font-size: 22px;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPhoto .BlogsPageSecion2InfosPhotoImg {
+    height: 100px;
+    width: 100px;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPhoto .BlogsPageSecion2InfosPhotoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosArchive h1 {
+    font-size: 22px;
+  }
+  Footer .FooterInfos {
+    width: 90%;
+  }
+  Footer .Footercolumns {
+    width: 23%;
+  }
+  Footer .Footercolumns:nth-child(3) .FooterWorkingHoursDays:nth-child(1) {
+    line-height: 145%;
+  }
+  Footer .Footercolumns:nth-child(3) .FooterWorkingHoursDays:nth-child(2) {
+    width: 45%;
+    margin-left: 20%;
+  }
+  Footer .Footercolumns:nth-child(4) .FooterSocialMedia {
+    width: 25px;
+    height: 25px;
+    font-size: medium;
+  }
+}
+@media (max-width: 425px) {
+  .BlogsPageSection1 h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .BlogsPageSection1 ol {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .BlogsPageSection1 li {
+    display: inline-block;
+    font-size: 11px;
+    font-family: "Hind";
+    color: #717171;
+  }
+  .BlogsPageSection1 li i {
+    margin-right: 6px;
+    font-size: medium;
+  }
+  .BlogsPageSection1 li .CardTextContentinfos {
+    margin-right: 20px;
+    color: #717171;
+    font-family: "Montserrat";
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles {
+    width: 100%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards .BlogsPageSection2ArticlesCardImg {
+    height: 275px;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards .BlogsPageSection2ArticlesCardText {
+    margin-left: 0;
+    margin-top: 0;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+    margin-right: 0;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesDoubleCards .BlogsPageSection2ArticlesCardText .BlogsPageSection2ArticlesCardTextContent ol {
+    flex-direction: column;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText {
+    align-items: flex-start;
+    padding-left: 5%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText p {
+    width: 95%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .FirstCommentNameIcones {
+    display: none;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil {
+    display: flex;
+    width: 100%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil img {
+    margin-right: 5%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .BlogsPageSection2ArticlesFirstCommentText .BlogsPageSection2ArticlesCommentsProfil ul {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 5%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesFirstCommentBackground .FirstCommentProfilPicture {
+    display: none;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSection2Articles .BlogsPageSection2ArticlesComments h1::after {
+    top: 50px;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos {
+    width: 80%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosTags ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosTags button {
+    width: 90%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPhoto .BlogsPageSecion2InfosPhotoImg {
+    height: 100px;
+    width: 100px;
+  }
+  Footer .FooterInfos {
+    flex-direction: column;
+  }
+  Footer .FooterInfos .Footercolumns {
+    width: 75%;
+    margin-bottom: 10%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
