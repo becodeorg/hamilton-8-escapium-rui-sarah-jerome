@@ -81,13 +81,13 @@ td, th {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 700px;
 }
 .AboutPageSection2 h2 {
   font-size: 44px;
   font-family: "Montserrat";
   font-weight: 600;
   color: #fefefe;
+  margin-bottom: 0%;
 }
 .AboutPageSection2 h3 {
   font-size: 32px;
@@ -105,6 +105,7 @@ td, th {
 .AboutPageSection2 .fa-minus {
   font-size: 30px;
   margin-bottom: 2.5%;
+  margin-top: 10%;
 }
 .AboutPageSection2 .AboutPageSection2Instructions {
   width: 70%;
@@ -113,6 +114,7 @@ td, th {
   justify-content: space-between;
   align-items: baseline;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 .AboutPageSection2 .AboutPageSection2Instructions .AboutPageSection2InstructionsCard {
   width: 30%;
@@ -120,6 +122,7 @@ td, th {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10%;
 }
 .AboutPageSection2 .AboutPageSection2Instructions .AboutPageSection2InstructionsCard p {
   text-align: center;
@@ -131,12 +134,11 @@ td, th {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px #fefefe solid;
+  border: 2px #717171 solid;
   border-radius: 50px;
   width: 100px;
   height: 100px;
   margin-bottom: 15%;
-  z-index: 0;
 }
 .AboutPageSection2 .AboutPageSection2Instructions .InstructionsLogo::after {
   content: "";
@@ -145,13 +147,45 @@ td, th {
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
   width: 175%;
-  height: 1px;
-  background-color: #fefefe;
-  z-index: -1;
+  height: 2px;
+  background-color: #717171;
+  z-index: 0;
   overflow: hidden;
+}
+.AboutPageSection2 .AboutPageSection2Instructions .InstructionsLogo .InstructionLogoCircle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: #222222;
+  z-index: 1;
 }
 .AboutPageSection2 .AboutPageSection2Instructions .InstructionsLogo i {
   font-size: 45px;
+  z-index: 2;
+}
+
+.AboutPageSection3 {
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AboutPageSection3 .AboutPageSection3Img img {
+  z-index: 1;
+}
+.AboutPageSection3 .AboutPageSection3ImgPlayButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: red;
+  font-size: xx-large;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
 }
 
 .AboutPageSection4 {
@@ -246,7 +280,7 @@ td, th {
   background-color: #1B1B1B;
 }
 .AboutPageSection6 .fa-minus {
-  font-size: 16px;
+  font-size: 30px;
   margin-top: 7.5%;
   margin-bottom: 2.5%;
 }
@@ -267,6 +301,7 @@ td, th {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5%;
 }
 .AboutPageSection6 .AboutPageSection6Carousel ul {
   margin-top: 2.5%;
@@ -420,7 +455,6 @@ Footer .FooterInfos {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  border: 1px white solid;
 }
 Footer .Footercolumns {
   width: 23%;
@@ -546,8 +580,7 @@ Footer .Footercolumns:nth-child(4) .Footerdash::after {
   width: 50%;
   color: #717171;
 }
-
-.FooterCopyright {
+Footer .FooterCopyright {
   width: 100%;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -558,15 +591,150 @@ Footer .Footercolumns:nth-child(4) .Footerdash::after {
   opacity: 0.5;
   border-top: 2px #434343 solid;
 }
-.FooterCopyright img {
+Footer .FooterCopyright img {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
 }
-.FooterCopyright p {
+Footer .FooterCopyright p {
   font-size: 11px;
   font-family: "Montserrat";
   font-weight: 600;
   color: #717171;
+}
+
+@media (max-width: 768px) {
+  .AboutPageSection2 h3 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .AboutPageSection2 p {
+    font-size: 16px;
+  }
+  .AboutPageSection2 .AboutPageSection2Instructions {
+    width: 95%;
+    margin-top: 0;
+  }
+  .AboutPageSection2 .AboutPageSection2Instructions .AboutPageSection2InstructionsCard {
+    width: 32%;
+  }
+  .AboutPageSection4 .AboutPageSection4Certificates {
+    width: 90%;
+  }
+  .AboutPageSection4 .Certificate {
+    width: 24%;
+  }
+  .AboutPageSection5 .AboutPageSection5OurTeam {
+    width: 90%;
+  }
+  .AboutPageSection5 .AboutPageSection5OurTeam .AboutPageSection5OurTeamMember {
+    width: 32%;
+  }
+  .AboutPageSection6 .AboutPageSection6Carousel {
+    width: 90%;
+  }
+  .AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide {
+    width: 49%;
+  }
+  .AboutPageSection7 .AboutPageSection7FAQs {
+    width: 70%;
+  }
+  Footer .FooterInfos {
+    width: 90%;
+  }
+  Footer .Footercolumns {
+    width: 23%;
+  }
+  Footer .Footercolumns:nth-child(3) .FooterWorkingHoursDays:nth-child(1) {
+    line-height: 145%;
+  }
+  Footer .Footercolumns:nth-child(3) .FooterWorkingHoursDays:nth-child(2) {
+    width: 45%;
+    margin-left: 20%;
+  }
+  Footer .Footercolumns:nth-child(4) .FooterSocialMedia {
+    width: 25px;
+    height: 25px;
+    font-size: medium;
+  }
+}
+@media (max-width: 425px) {
+  .AboutPageSection1 h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .AboutPageSection1 ol {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .AboutPageSection1 li {
+    display: inline-block;
+    font-size: 11px;
+    font-family: "Hind";
+    color: #717171;
+  }
+  .AboutPageSection1 li i {
+    margin-right: 6px;
+    font-size: medium;
+  }
+  .AboutPageSection2 h2 {
+    margin-bottom: 15%;
+  }
+  .AboutPageSection2 .AboutPageSection2Instructions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .AboutPageSection2 .AboutPageSection2Instructions .AboutPageSection2InstructionsCard {
+    margin-top: 5%;
+    width: 90%;
+  }
+  .AboutPageSection3 .AboutPageSection3ImgPlayButton {
+    width: 50px;
+    height: 50px;
+    font-size: medium;
+  }
+  .AboutPageSection4 .AboutPageSection4Certificates {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .AboutPageSection4 .AboutPageSection4Certificates .Certificate {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 7.5%;
+  }
+  .AboutPageSection5 .AboutPageSection5OurTeam {
+    flex-direction: column;
+    align-items: center;
+  }
+  .AboutPageSection5 .AboutPageSection5OurTeam .AboutPageSection5OurTeamMember {
+    width: 90%;
+    margin-top: 7.5%;
+    margin-bottom: 10%;
+  }
+  .AboutPageSection5 .AboutPageSection5OurTeam .AboutPageSection5OurTeamMember .Section5TeamMemberName {
+    align-items: center;
+  }
+  .AboutPageSection5 .AboutPageSection5OurTeam .AboutPageSection5OurTeamMember .Section5TeamMemberName h3 {
+    font-size: 22px;
+  }
+  Footer .FooterInfos {
+    flex-direction: column;
+  }
+  Footer .FooterInfos .Footercolumns {
+    width: 75%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  Footer .FooterInfos .Footercolumns .Footerdash {
+    width: 100%;
+    left: 20px;
+    top: -10px;
+  }
+  Footer .FooterInfos .Footercolumns .Footerdash::after {
+    left: 30px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

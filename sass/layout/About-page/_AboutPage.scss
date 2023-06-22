@@ -2,6 +2,7 @@
 @import "libs/_minireset";
 @import "libs/_mixins";
 
+
 .AboutPageSection1 {
 
     background-image: url("https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/slide-1.jpg?raw=true");
@@ -46,7 +47,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 700px;
 
 
     h2{
@@ -54,6 +54,7 @@
         font-family: "Montserrat";
         font-weight: 600;
         color: $White-background;
+        margin-bottom: 0%;
     }
 
     h3 {
@@ -74,6 +75,7 @@
     .fa-minus {
         font-size: 30px;
         margin-bottom: 2.5%;
+        margin-top: 10%;
     }
 
     .AboutPageSection2Instructions {
@@ -83,6 +85,7 @@
         justify-content: space-between;
         align-items:baseline;
         margin-top: 5%;
+        margin-bottom: 5%;
 
         .AboutPageSection2InstructionsCard {
             width: 30%;
@@ -90,6 +93,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 10%;
 
             p {
                 text-align: center;
@@ -97,45 +101,81 @@
             }
         }
 
-     .InstructionsLogo {
-  position: relative;
-  background-color: $Dark-background;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px $White-background solid;
-  border-radius: 50px;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 15%;
-  z-index: 0;
+        .InstructionsLogo {
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    width: 175%;
-    height: 1px;
-    background-color: $White-background;
-    z-index: -1;
-    overflow: hidden;
+            position: relative;
+            background-color: $Dark-background;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px $Global-font-color solid;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15%;
 
-  }
+            &::after {
+                
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+                width: 175%;
+                height: 2px;
+                background-color: $Global-font-color;
+                z-index: 0;
+                overflow: hidden;
+            }
 
-  i {
-    font-size: 45px;
-  }
-}
+            .InstructionLogoCircle {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50px;
+                background-color: $Dark-background;
+                z-index: 1;
 
+            }
+
+            i {
+                font-size: 45px;
+                z-index: 2;
+            }
+        }
     }
-
 }
 
 .AboutPageSection3 {
 
-}
+    background-color: $Dark-background;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .AboutPageSection3Img {
+
+        img {
+        z-index: 1;
+        }
+    }
+
+    .AboutPageSection3ImgPlayButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: red;
+        font-size: xx-large;
+        z-index: 2;
+        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 255);
+    }
+    }
+
 
 .AboutPageSection4 {
 
@@ -258,7 +298,7 @@
     background-color: $Darkest-background;
 
     .fa-minus {
-        font-size: 16px;
+        font-size: 30px;
         margin-top: 7.5%;
         margin-bottom: 2.5%;
     }
@@ -284,6 +324,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 5%;
 
         ul {
             margin-top: 2.5%;
@@ -465,7 +506,6 @@ Footer {
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
-        border: 1px white solid;
 
       }
       
@@ -626,36 +666,241 @@ Footer {
                     }
               }
         }
+
+        .FooterCopyright {
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+            border-top: 2px #434343 solid;
+    
+            img {
+                margin-top: 2.5%;
+                margin-bottom:2.5%;
+            }
+    
+            p {
+                font-size: 11px;
+                font-family: "Montserrat";
+                font-weight: 600;
+                color: $Global-font-color;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .AboutPageSection2{
+
+
+            h3 {
+                font-size: 22px;
+                font-weight: 600;
+
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .AboutPageSection2Instructions {
+                width: 95%;
+                margin-top: 0;
+
+                .AboutPageSection2InstructionsCard {
+                    width: 32%;
+                }
+            }
+        }
+
+        .AboutPageSection4 {
+
+            .AboutPageSection4Certificates {
+                width: 90%;
+            }
+            .Certificate {
+                width: 24%;
+            }
+        }
+
+        .AboutPageSection5 {
+
+            .AboutPageSection5OurTeam {
+                width: 90%;
+
+                .AboutPageSection5OurTeamMember {
+                    width: 32%;
+                }
+            }    
+
+        }
+
+        .AboutPageSection6 {
+            .AboutPageSection6Carousel {
+                width: 90%;
+
+                .AboutPageSection6CarouselSlide {
+                    width: 49%;
+                }
+            } 
+        }
+
+        .AboutPageSection7 {
+            .AboutPageSection7FAQs {
+                width: 70%;
+            }
+        }
+
+        Footer {
+            .FooterInfos {
+            width: 90%;
+            }
+    
+            .Footercolumns {
+                width: 23%;
+            }
+    
+            .Footercolumns:nth-child(3) {
+    
+                    .FooterWorkingHoursDays:nth-child(1) {
+                        line-height: 145%;
+                    }
+    
+                    .FooterWorkingHoursDays:nth-child(2) {
+                        width: 45%;
+                        margin-left: 20%;
+                    }
+            
+                }
+    
+            .Footercolumns:nth-child(4) {
+                .FooterSocialMedia {
+                    width: 25px;
+                    height: 25px;
+                    font-size: medium;
+    
+                }
+            }
+        }
     }
 
 
-    .FooterCopyright {
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0.5;
-        border-top: 2px #434343 solid;
+    @media (max-width: 425px) {
 
-        img {
-            margin-top: 2.5%;
-            margin-bottom:2.5%;
+        .AboutPageSection1 {
+
+
+
+            h2 {
+                font-size: 32px;
+                text-align: center;
+            }
+    
+            ol {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            li {
+                display:inline-block;
+                font-size: 11px;
+                font-family: "Hind";
+                color: $Global-font-color;
+    
+            i {
+                margin-right: 6px;
+                font-size: medium;
+            }
+    
+        }
         }
 
-        p {
-            font-size: 11px;
-            font-family: "Montserrat";
-            font-weight: 600;
-            color: $Global-font-color;
+        .AboutPageSection2 {
+
+            h2 {
+                margin-bottom: 15%;
+            }
+            .AboutPageSection2Instructions {
+                flex-direction: column;
+                align-items: center;
+
+                .AboutPageSection2InstructionsCard {
+                    margin-top: 5%;
+                    width: 90%;
+                }
+
+            }
         }
-    }
 
+        .AboutPageSection3 {
+            .AboutPageSection3ImgPlayButton {
+                width: 50px;
+                height: 50px;
+                font-size: medium;
+            }
+        }
 
+        .AboutPageSection4 {
+            .AboutPageSection4Certificates {
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
 
+                .Certificate {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 7.5%;
+                }
+            } 
+        }
 
+        .AboutPageSection5 {
+            .AboutPageSection5OurTeam {
+                flex-direction: column;
+                align-items: center;
+                
+                    .AboutPageSection5OurTeamMember {
+                        width: 90%;
+                        margin-top: 7.5%;
+                        margin-bottom: 10%;
+                        .Section5TeamMemberName {
+                            align-items: center;
+                            h3 {
+                                font-size: 22px;
+                            }
+                        }
+                    }
+            }
+        }
+    
+        Footer {
+    
+            .FooterInfos {
+                flex-direction: column;
+    
+                .Footercolumns { 
+                    width: 75%;
+                    margin-bottom: 10%;
+                    margin-top: 10%;
 
+                    .Footerdash {
+                        width: 100%;
+                        left: 20px;
+                        top: -10px;
 
+                        &::after { 
+                            left: 30px;
+                        }
+                        }
 
+                    }
+                }
+            }
+        }
+    

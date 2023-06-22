@@ -1006,6 +1006,63 @@ Footer .FooterCopyright p {
   .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos {
     width: 80%;
   }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop {
+    margin-top: 15%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop h1 {
+    font-size: 32px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #fefefe;
+    text-align: center;
+    text-align: start;
+    margin-bottom: 15%;
+    position: relative;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop h1::after {
+    content: "";
+    font-size: 16px;
+    font-family: "Hind";
+    position: absolute;
+    font-weight: 500;
+    top: 150%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    height: 3px;
+    background-color: #717171;
+    opacity: 0.5;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop .BlogsPageSecion2InfosPopContainer {
+    width: 90%;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop .BlogsPageSecion2InfosPopContainer .BlogsPageSecion2InfosPopCards p {
+    width: 30%;
+    font-size: 11px;
+    color: #717171;
+    position: relative;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop .BlogsPageSecion2InfosPopContainer .BlogsPageSecion2InfosPopCards p::after {
+    content: "";
+    font-size: 16px;
+    font-family: "Hind";
+    position: absolute;
+    font-weight: 500;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 1px;
+    background-color: #717171;
+    opacity: 0.5;
+  }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPop .BlogsPageSecion2InfosPopContainer .BlogsPageSecion2InfosPopCards h2 {
+    width: 60%;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #fefefe;
+  }
   .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosTags ul {
     display: flex;
     flex-direction: row;
@@ -1017,12 +1074,25 @@ Footer .FooterCopyright p {
     height: 100px;
     width: 100px;
   }
+  .BlogsPageSection2 .BlogsPageSection2All .BlogsPageSecion2Infos .BlogsPageSecion2InfosPhoto .BlogsPageSecion2InfosPhotoGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
   Footer .FooterInfos {
     flex-direction: column;
   }
   Footer .FooterInfos .Footercolumns {
     width: 75%;
     margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  Footer .FooterInfos .Footercolumns .Footerdash {
+    width: 100%;
+    left: 20px;
+    top: -10px;
+  }
+  Footer .FooterInfos .Footercolumns .Footerdash::after {
+    left: 30px;
   }
 }
 

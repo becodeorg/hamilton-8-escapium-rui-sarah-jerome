@@ -1365,16 +1365,28 @@ Footer {
     }
 
     Footer {
-
+    
         .FooterInfos {
             flex-direction: column;
 
-            .Footercolumns {
+            .Footercolumns { 
                 width: 75%;
                 margin-bottom: 10%;
+                margin-top: 10%;
+
+                .Footerdash {
+                    width: 100%;
+                    left: 20px;
+                    top: -10px;
+
+                    &::after { 
+                        left: 30px;
+                    }
+                    }
+
+                }
             }
         }
-    }
 }
 
 
