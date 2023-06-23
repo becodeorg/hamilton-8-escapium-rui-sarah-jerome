@@ -42,8 +42,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
-  gap: 10rem;
+  padding: 3rem 0;
+  gap: 5rem;
 }
 
 .rooms-dificulty-buttons {
@@ -67,6 +67,10 @@ main {
       border: 0.2rem solid transparent;
     }
   }
+}
+
+.roomsPage-header {
+  text-align: center;
 }
 
 .display-rooms {
@@ -170,17 +174,11 @@ main {
 }
 
 @media (max-width: 1100px) {
-  .rooms-container {
-    padding: 1rem;
-  }
   .display-rooms {
     width: 100%;
   }
 }
 @media (max-width: 800px) {
-  .rooms-container {
-    gap: 5rem;
-  }
   .rooms-dificulty-buttons {
     gap: 0.5rem;
     button {
@@ -190,9 +188,6 @@ main {
   }
   .display-rooms {
     gap: 1.5rem;
-    .room-displayer {
-      flex-basis: calc(50% - 2rem);
-    }
   }
   .room-displayer-footer {
     flex-direction: column;
@@ -214,12 +209,14 @@ main {
     }
   }
   .display-rooms {
+    padding: 1.5rem;
     flex-direction: column;
     flex-wrap: nowrap;
     .room-displayer {
       max-width: 100%;
     }
     .room-displayer {
+      aspect-ratio: 1/1;
       width: 100%;
     }
   }

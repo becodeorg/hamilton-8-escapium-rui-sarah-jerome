@@ -56,6 +56,7 @@
 
 @mixin pages-header-text {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   span {
     color: $global-font-color;

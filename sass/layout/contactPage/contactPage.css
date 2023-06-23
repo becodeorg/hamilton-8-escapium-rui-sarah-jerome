@@ -89,6 +89,7 @@
 }
 .pages-header-text {
   display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 .pages-header-text span {
@@ -100,6 +101,112 @@
 .pages-header-text p:hover {
   color: #fefefe;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 440px) {
+  #btn_nav {
+    display: none;
+  }
+}
+#top_nav {
+  position: fixed;
+  top: 0;
+  margin-right: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.288);
+}
+
+#leftTopBar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+#nav_links {
+  height: 5rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+#nav_links li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #717171;
+  font-weight: 700;
+}
+#nav_links li a:hover {
+  color: #fefefe;
+}
+#nav_links li a:hover::after {
+  min-width: 100%;
+}
+#nav_links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 40%;
+  height: 0.3rem;
+  width: 0;
+  background-color: red;
+  transform: rotate(135deg);
+  z-index: -1;
+}
+
+.containerLigneRed {
+  position: relative;
+  display: inline-block;
+}
+
+.word_on_red_ligne {
+  z-index: 2;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.ligne_red {
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  rotate: -45deg;
+  height: 3px;
+  width: 55px;
+  background-color: #ff0000;
+  z-index: -1;
+}
+
+#btn_nav {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 13px 34px;
+  border: solid 2.5px #cbcbcb;
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  font-family: "Arial", sans-serif;
+}
+
+#burger {
+  width: 25px;
+  height: 25px;
+  z-index: 100;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+#burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
 }
 
 header {
@@ -179,7 +286,8 @@ main {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  column-gap: 3rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
   row-gap: 3rem;
 }
 #contactForm #name {
@@ -192,6 +300,7 @@ main {
   grid-area: 2/1/3/3;
 }
 #contactForm #submitButton {
+  max-height: 4rem;
   color: #fefefe;
   background-color: #f60b0e;
   font-weight: bold;
@@ -218,6 +327,4 @@ main {
 
 .contact-info-logos {
   display: flex;
-}
-
-/*# sourceMappingURL=contacPage.css.map */
+}/*# sourceMappingURL=contactPage.css.map */
