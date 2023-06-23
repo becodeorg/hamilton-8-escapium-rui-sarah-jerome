@@ -428,22 +428,32 @@ main {
   color: #f60b0e;
   font-weight: bold;
   word-spacing: 0.2rem;
+  text-decoration: none;
+  border-bottom: 1px solid #f60b0e;
+  padding-bottom: 0.2rem;
 }
-
 .blog-post {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: calc(33% - 3rem);
 }
-.blog-post p,
+.blog-post .topic-post,
 .blog-post h3 {
   padding-left: 1.5rem;
+}
+.blog-post .topic-post:hover,
+.blog-post h3:hover {
+  cursor: pointer;
+  color: #f60b0e;
 }
 
 .img-user-container {
   position: relative;
   overflow: hidden;
+}
+.img-user-container:hover {
+  cursor: pointer;
 }
 .img-user-container:hover .blog-img {
   transform: scale(1.1);
@@ -485,6 +495,83 @@ main {
   width: 60%;
   display: flex;
   gap: 2rem;
+}
+
+.who-can-play {
+  background-color: #222222;
+}
+
+.photos-gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1b1b1b;
+  padding: 7rem 0 10rem 0;
+  gap: 3.5rem;
+}
+.photos-gallery-container a {
+  color: #f60b0e;
+  font-weight: bold;
+  word-spacing: 0.2rem;
+  text-decoration: none;
+  border-bottom: 1px solid #f60b0e;
+  padding-bottom: 0.2rem;
+}
+.photos-gallery-container .followFeed {
+  color: #fefefe;
+  font-weight: bold;
+  background-color: #1b1b1b;
+  border: 2px solid #717171;
+  border-radius: 3rem;
+  padding: 1.5rem 3rem;
+}
+.photos-gallery-container .followFeed:hover {
+  cursor: pointer;
+  background-color: #2b2b2b;
+}
+
+.photos-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  gap: 1rem;
+}
+
+.img-container {
+  width: calc(25% - 1rem);
+  position: relative;
+}
+.img-container:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: linear-gradient(to right, #f60b0e 0%, #f60b0e 100%), linear-gradient(to top, #f60b0e 50%, transparent 50%), linear-gradient(to top, #f60b0e 50%, transparent 50%), linear-gradient(to right, #f60b0e 0%, #f60b0e 100%), linear-gradient(to left, #f60b0e 0%, #f60b0e 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transform: scaleX(0) rotate(0deg);
+  transition-delay: 0.4s, 0.2s, 0s;
+}
+.img-container:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(0deg);
+  transition-delay: 0s, 0.2s, 0.4s;
+}
+.img-container:hover {
+  cursor: pointer;
+}
+.img-container:hover img {
+  opacity: 0.2;
+}
+.img-container img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .bookRoom {

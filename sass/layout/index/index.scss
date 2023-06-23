@@ -367,6 +367,11 @@ main {
     color: $red;
     font-weight: bold;
     word-spacing: 0.2rem;
+    text-decoration: none;
+    border-bottom: 1px solid $red;
+    padding-bottom: 0.2rem;
+    &:hover {
+    }
   }
 }
 
@@ -375,15 +380,20 @@ main {
   flex-direction: column;
   gap: 1.5rem;
   width: calc(33% - 3rem);
-  p,
+  .topic-post,
   h3 {
     padding-left: 1.5rem;
+    &:hover {
+      cursor: pointer;
+      color: $red;
+    }
   }
 }
 .img-user-container {
   position: relative;
   overflow: hidden;
   &:hover {
+    cursor: pointer;
     .blog-img {
       transform: scale(1.1);
     }
@@ -426,6 +436,61 @@ main {
   width: 60%;
   display: flex;
   gap: 2rem;
+}
+
+.who-can-play {
+  background-color: $dark-background;
+}
+
+.photos-gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $darkest-background;
+  padding: 7rem 0 10rem 0;
+  gap: 3.5rem;
+  a {
+    color: $red;
+    font-weight: bold;
+    word-spacing: 0.2rem;
+    text-decoration: none;
+    border-bottom: 1px solid $red;
+    padding-bottom: 0.2rem;
+  }
+  .followFeed {
+    color: $white-background;
+    font-weight: bold;
+    background-color: $darkest-background;
+    border: 2px solid $global-font-color;
+    border-radius: 3rem;
+    padding: 1.5rem 3rem;
+    &:hover {
+      cursor: pointer;
+      background-color: #2b2b2b;
+    }
+  }
+}
+
+.photos-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  gap: 1rem;
+}
+.img-container {
+  width: calc(25% - 1rem);
+  @include magic-border(2px, $red, 0.2s, 0);
+  &:hover {
+    cursor: pointer;
+    img {
+      opacity: 0.2;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
 }
 
 .bookRoom {
