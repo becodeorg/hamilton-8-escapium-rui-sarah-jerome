@@ -534,11 +534,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   width: 60%;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .img-container {
-  width: calc(25% - 1rem);
+  width: calc(25% - 0.5rem);
   position: relative;
 }
 .img-container:before {
@@ -572,6 +572,54 @@ main {
   display: block;
   width: 100%;
   aspect-ratio: 1/1;
+}
+
+.get-in-touch {
+  background-color: #222222;
+  width: 100%;
+  display: flex;
+}
+.get-in-touch .mapFromGoogle {
+  width: 50%;
+}
+.get-in-touch .form {
+  padding: 5rem 0;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#contactForm {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#contactForm #submitButton {
+  max-height: 4rem;
+  color: #fefefe;
+  background-color: #222222;
+  font-weight: bold;
+  border-radius: 5rem;
+  font-size: 1.3rem;
+  width: 200px;
+  padding: 1rem;
+  border: 3px solid #717171;
+}
+#contactForm #submitButton:hover {
+  cursor: pointer;
+  background-color: #272727;
+  color: #d1d0d0;
+}
+#contactForm input,
+#contactForm #comment {
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  color: #717171;
+  background-color: #222222;
+  border: none;
+  border-bottom: 1px solid #717171;
 }
 
 .bookRoom {

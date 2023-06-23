@@ -475,10 +475,10 @@ main {
   display: flex;
   flex-wrap: wrap;
   width: 60%;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .img-container {
-  width: calc(25% - 1rem);
+  width: calc(25% - 0.5rem);
   @include magic-border(2px, $red, 0.2s, 0);
   &:hover {
     cursor: pointer;
@@ -490,6 +490,54 @@ main {
     display: block;
     width: 100%;
     aspect-ratio: 1/1;
+  }
+}
+
+.get-in-touch {
+  background-color: $dark-background;
+  width: 100%;
+  display: flex;
+  .mapFromGoogle {
+    width: 50%;
+  }
+
+  .form {
+    padding: 5rem 0;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+#contactForm {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  #submitButton {
+    max-height: 4rem;
+    color: $white-background;
+    background-color: $dark-background;
+    font-weight: bold;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    width: 200px;
+    padding: 1rem;
+    border: 3px solid $global-font-color;
+    &:hover {
+      cursor: pointer;
+      background-color: #272727;
+      color: #d1d0d0;
+    }
+  }
+  input,
+  #comment {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: $global-font-color;
+    background-color: $dark-background;
+    border: none;
+    border-bottom: 1px solid $global-font-color;
   }
 }
 
