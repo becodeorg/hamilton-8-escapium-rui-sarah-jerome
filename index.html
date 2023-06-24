@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/sass/layout/index/index.css" />
+    <script src="/app.js" defer></script>
     <script
       src="https://kit.fontawesome.com/8ad7569ef1.js"
       crossorigin="anonymous"
     ></script>
-    <script src="/app.js" defer></script>
     <title>HomePage</title>
   </head>
   <body>
@@ -40,6 +40,21 @@
         <button class="hamburguerButton">^</button>
         <a href="#" id="btn_nav">Book Now!</a>
       </nav>
+      <div class="header-content">
+        <div class="header-txt">
+          <h1>Escape in 60 mins?</h1>
+          <p>VIEW OUR ROOMS</p>
+        </div>
+        <div class="header-buttons">
+          <button data-index="0" class="noEffect-button headerB"></button>
+          <button data-index="1" class="noEffect-button headerB"></button>
+          <button
+            data-index="2"
+            class="noEffect-button headerB active"
+          ></button>
+          <button data-index="3" class="noEffect-button headerB"></button>
+        </div>
+      </div>
     </header>
     <main>
       <section class="featuredRooms">
@@ -327,7 +342,7 @@
         <button class="followFeed">Follow Our Feed</button>
       </section>
       <section class="get-in-touch">
-        <div class="mapFromGoogle">api later</div>
+        <div id="map"></div>
         <article class="form">
           <button class="noEffect-button"></button>
           <h2>Get In Touch</h2>
