@@ -588,6 +588,7 @@ main {
 .img-container {
   width: calc(25% - 0.5rem);
   position: relative;
+  position: relative;
 }
 .img-container:before {
   content: "";
@@ -616,10 +617,24 @@ main {
 .img-container:hover img {
   opacity: 0.2;
 }
+.img-container:hover .img-container-social {
+  z-index: 1;
+}
 .img-container img {
   display: block;
   width: 100%;
   aspect-ratio: 1/1;
+}
+.img-container .img-container-social {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  top: 50%;
+  right: 35%;
+  z-index: -1;
+}
+.img-container .img-container-social i {
+  font-size: 1.5rem;
 }
 
 .get-in-touch {

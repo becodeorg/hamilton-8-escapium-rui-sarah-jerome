@@ -4,6 +4,7 @@ const ul = document.querySelector("#nav_links");
 const leftBar = document.querySelector("#leftTopBar");
 const bookButton = document.querySelector("#btn_nav");
 const hamburguerButton = document.querySelector(".hamburguerButton");
+const viewAllRooms = document.querySelector(".viewRooms");
 
 // RESIZE PAGE WIDTH AND DISPLAY NAV BAR
 window.addEventListener("load", handleWindowSizeChange);
@@ -71,12 +72,11 @@ changeImgButton.forEach((button) => {
 
 // CHANGE BACKGROUND IMAGe EACH 10 SEC
 function changeImgEachTenS() {
-  let i = currentImg + 1;
+  let i = parseInt(currentImg) + 1;
   currentImg++;
   currentImg === 3 ? (currentImg = -1) : (currentImg = currentImg);
 
   header.style.backgroundImage = `url(${imgArray[i]})`;
-
   // CHANGE CLASS OF BUTTONS
   for (let j = 0; j < changeImgButton.length; j++) {
     if (parseInt(changeImgButton[j].getAttribute("data-index")) !== i) {
@@ -86,4 +86,9 @@ function changeImgEachTenS() {
     }
   }
 }
-setInterval(changeImgEachTenS, 10000);
+setInterval(changeImgEachTenS, 3000);
+
+// BE REDIRECTED TO ALL ROOMS PAGE
+viewAllRooms.addEventListener("click", () => {
+  window.location.href = "rooms.html";
+});
