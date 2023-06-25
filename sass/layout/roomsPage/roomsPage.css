@@ -74,16 +74,141 @@
 }
 
 header {
-  min-height: 65vh;
   background-image: url("/img/gallery/slide-1.jpg");
-  background-repeat: no-repeat;
+  min-height: 65vh;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
   background-size: cover;
-  background-position: top;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #1b1b1b, rgba(0, 0, 0, 0));
+}
+
+.top_nav {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  margin-right: 3rem;
+  width: 100%;
+  display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.col {
+  height: 100vh;
+  flex-direction: column;
+}
+
+#leftTopBar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hamburguerButton {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+#nav_links {
+  height: 5rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+#nav_links li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #717171;
+  font-weight: 700;
+  position: relative;
+}
+#nav_links li a:hover {
+  color: #fefefe;
+}
+#nav_links li a:hover::after {
+  min-width: 100%;
+}
+#nav_links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 40%;
+  height: 0.3rem;
+  width: 0;
+  background-color: red;
+  transform: rotate(135deg);
+}
+
+.containerLigneRed {
+  position: relative;
+  display: inline-block;
+}
+
+.word_on_red_ligne {
+  z-index: 2;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.ligne_red {
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  rotate: -45deg;
+  height: 3px;
+  width: 55px;
+  background-color: #ff0000;
+  z-index: -1;
+}
+
+#btn_nav {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 13px 34px;
+  border: solid 2.5px #cbcbcb;
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  font-family: "Arial", sans-serif;
+}
+
+#burger {
+  width: 25px;
+  height: 25px;
+  z-index: 100;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+#burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fefefe;
+  margin-bottom: 5px;
 }
 
 main {
@@ -125,6 +250,7 @@ main {
 }
 
 .roomsPage-header {
+  z-index: 2;
   text-align: center;
 }
 
@@ -135,25 +261,21 @@ main {
   flex-wrap: wrap;
   gap: 2rem;
 }
-.display-rooms .room-displayer {
+
+.room-displayer {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   justify-content: flex-end;
-  gap: 1.5rem;
+  gap: 3rem;
   width: calc(25% - 2rem);
   aspect-ratio: 1/1.5;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
 }
-.display-rooms .room-displayer h3 {
+.room-displayer h3 {
   z-index: 1;
 }
-.display-rooms .room-displayer .room-displayer-footer {
-  z-index: 1;
-}
-.display-rooms .room-displayer::after {
+.room-displayer::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -162,40 +284,180 @@ main {
   height: 100%;
   background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.2));
 }
-.display-rooms .one {
+.room-displayer:hover .one,
+.room-displayer:hover .two,
+.room-displayer:hover .three,
+.room-displayer:hover .four,
+.room-displayer:hover .five,
+.room-displayer:hover .six,
+.room-displayer:hover .seven,
+.room-displayer:hover .eight,
+.room-displayer:hover .nine,
+.room-displayer:hover .ten,
+.room-displayer:hover .eleven,
+.room-displayer:hover .twelve {
+  transform: scale(1.1);
+}
+
+.one {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/slide-2.jpg");
   background-position: 75% 50%;
 }
-.display-rooms .two {
+
+.two {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/room-2.jpg");
 }
-.display-rooms .three {
+
+.three {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/room-3.jpg");
 }
-.display-rooms .five {
+
+.four {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  background-image: url("/img/gallery/room-2.jpg");
+}
+
+.five {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/room-5.jpg");
 }
-.display-rooms .six {
+
+.six {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/video-placeholder.jpg");
 }
-.display-rooms .seven {
+
+.seven {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/room-7.jpg");
 }
-.display-rooms .eight {
+
+.eight {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/room-8.jpg");
 }
-.display-rooms .nine {
+
+.nine {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/room-9.jpg");
 }
-.display-rooms .ten {
+
+.ten {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/room-3.jpg");
 }
-.display-rooms .twelve {
+
+.eleven {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  background-image: url("/img/gallery/room-9.jpg");
+}
+
+.twelve {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
   background-image: url("/img/gallery/room-2.jpg");
 }
 
 .room-displayer-footer {
+  padding-left: 2rem;
   display: flex;
+  z-index: 1;
+  padding-bottom: 4rem;
+  gap: 2rem;
+}
+.room-displayer-footer .number-players,
+.room-displayer-footer .time-roomScape,
+.room-displayer-footer .roomLocation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.room-displayer-footer .number-players p,
+.room-displayer-footer .time-roomScape p,
+.room-displayer-footer .roomLocation p {
+  font-size: 1.5rem;
+}
+.room-displayer-footer .number-players i,
+.room-displayer-footer .time-roomScape i,
+.room-displayer-footer .roomLocation i {
+  font-size: 1.5rem;
+  color: #717171;
+}
+
+.difficulty-room {
+  display: flex;
+  z-index: 1;
+  gap: 0.5rem;
+}
+.difficulty-room i {
+  font-size: 1.5rem;
+}
+
+.difficulty-room,
+.room-displayer h3 {
+  padding-left: 2rem;
 }
 
 .display-rooms-buttons {
@@ -229,6 +491,20 @@ main {
   }
 }
 @media (max-width: 800px) {
+  .display-rooms-buttons button {
+    padding: 1rem 1.3rem;
+  }
+  .difficulty-room {
+    gap: 0.2;
+  }
+  .difficulty-room i {
+    font-size: 0.8rem;
+  }
+  .room-displayer {
+    gap: 0;
+    justify-content: center;
+    gap: 1rem;
+  }
   .rooms-dificulty-buttons {
     gap: 0.5rem;
   }
@@ -240,7 +516,20 @@ main {
     gap: 1.5rem;
   }
   .room-displayer-footer {
+    padding-bottom: 0;
+    gap: 0.5rem;
     flex-direction: column;
+  }
+  .room-displayer-footer .number-players p,
+  .room-displayer-footer .time-roomScape p,
+  .room-displayer-footer .roomLocation p {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .room-displayer-footer .number-players i,
+  .room-displayer-footer .time-roomScape i,
+  .room-displayer-footer .roomLocation i {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 556px) {
@@ -264,12 +553,34 @@ main {
   }
   .display-rooms .room-displayer {
     max-width: 100%;
-  }
-  .display-rooms .room-displayer {
     aspect-ratio: 1/1;
     width: 100%;
+    justify-content: flex-end;
+    gap: 3.5rem;
+  }
+  .difficulty-room i {
+    font-size: 1.5rem;
   }
   .room-displayer-footer {
+    padding-bottom: 3rem;
     flex-direction: row;
+    gap: 3rem;
+  }
+  .room-displayer-footer .number-players,
+  .room-displayer-footer .time-roomScape,
+  .room-displayer-footer .roomLocation {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .room-displayer-footer .number-players p,
+  .room-displayer-footer .time-roomScape p,
+  .room-displayer-footer .roomLocation p {
+    font-size: 2rem;
+  }
+  .room-displayer-footer .number-players i,
+  .room-displayer-footer .time-roomScape i,
+  .room-displayer-footer .roomLocation i {
+    font-size: 1.7rem;
   }
 }/*# sourceMappingURL=roomsPage.css.map */

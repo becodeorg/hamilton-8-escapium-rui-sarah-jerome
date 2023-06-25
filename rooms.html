@@ -4,10 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/sass/layout/roomsPage/roomsPage.css" />
+    <script
+      src="https://kit.fontawesome.com/8ad7569ef1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/menuNav.js" defer></script>
     <title>Rooms</title>
   </head>
   <body>
     <header>
+      <nav role="navigation" class="top_nav">
+        <div id="leftTopBar">
+          <img src="img/logo/logo.png" id="logo_escapium" alt="logo escapium" />
+          <ul id="nav_links">
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">home</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">about</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">rooms</a>
+            </li>
+            <li class="containerLigneRed">
+              <a class="links_menu" href="#">bookings</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">blog</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">contact</a>
+            </li>
+          </ul>
+        </div>
+        <button class="hamburguerButton">^</button>
+        <a href="#" id="btn_nav">Book Now!</a>
+      </nav>
       <section class="roomsPage-header">
         <h1>contacts<span>.</span></h1>
         <div class="pages-header-text">
@@ -28,100 +60,304 @@
           <button>Hard</button>
         </article>
         <article class="display-rooms">
-          <div class="room-displayer one">
+          <div class="room-displayer">
+            <div class="one"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>Magic Imporium</h3>
             <div class="room-displayer-footer">
-              <p>2-3</p>
-              <p>60</p>
-              <p>NY 3031</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer two">
+          <div class="room-displayer">
+            <div class="two"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>The Cure</h3>
             <div class="room-displayer-footer">
-              <p>2-3</p>
-              <p>60</p>
-              <p>LA 20198</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer three">
+          <div class="room-displayer">
+            <div class="three"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>Burlesque</h3>
             <div class="room-displayer-footer">
-              <p>3-5</p>
-              <p>60</p>
-              <p>BH 90210</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer four">
+          <div class="room-displayer">
+            <div class="four"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>Prison Break</h3>
             <div class="room-displayer-footer">
-              <p>4-6</p>
-              <p>60</p>
-              <p>NY 3031</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer five">
+          <div class="room-displayer">
+            <div class="five"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>The Hospital</h3>
             <div class="room-displayer-footer">
-              <p>2-3</p>
-              <p>60</p>
-              <p>NY 3031</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer six">
+          <div class="room-displayer">
+            <div class="six"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>Abandoned Factory</h3>
             <div class="room-displayer-footer">
-              <p>6-8</p>
-              <p>60</p>
-              <p>OKC 2179</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer seven">
+          <div class="room-displayer">
+            <div class="seven"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>Bunker 51</h3>
             <div class="room-displayer-footer">
-              <p>4-6</p>
-              <p>60</p>
-              <p>NY 3031</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer eight">
+          <div class="room-displayer">
+            <div class="eight"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>The Mystical Room</h3>
             <div class="room-displayer-footer">
-              <p>2-3</p>
-              <p>60</p>
-              <p>LA 20198</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer nine">
+          <div class="room-displayer">
+            <div class="nine"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>Back To The Future</h3>
             <div class="room-displayer-footer">
-              <p>3-4</p>
-              <p>60</p>
-              <p>NY 3031</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer ten">
+          <div class="room-displayer">
+            <div class="ten"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>Burlesque</h3>
             <div class="room-displayer-footer">
-              <p>3-5</p>
-              <p>60</p>
-              <p>BH 90210</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer eleven">
+          <div class="room-displayer">
+            <div class="eleven"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>Prison Break</h3>
             <div class="room-displayer-footer">
-              <p>4-6</p>
-              <p>60</p>
-              <p>NY 3031</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
-          <div class="room-displayer twelve">
+          <div class="room-displayer">
+            <div class="twelve"></div>
+            <div class="difficulty-room">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #4d4d4d"></i>
+            </div>
             <h3>The Cure</h3>
             <div class="room-displayer-footer">
-              <p>2-3</p>
-              <p>60</p>
-              <p>LA 20198</p>
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
             </div>
           </div>
         </article>
