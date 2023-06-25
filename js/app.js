@@ -1,5 +1,3 @@
-const viewAllRooms = document.querySelector(".viewRooms");
-
 // CHANGE HEADER BACKGROUND IMAGE WITH USER CLICK OR EACH 10SECONDS.
 
 const firstImg = "/img/gallery/slide-1.jpg";
@@ -17,6 +15,7 @@ imgArray.push(firstImg, secondImg, thirdImg, fourthImg);
 // EACH CLICK CHANGE BACKGROUND IMAGE
 changeImgButton.forEach((button) => {
   button.addEventListener("click", () => {
+    console.log("working");
     currentImg = button.getAttribute("data-index");
     //CHANGE BACKGROUND IMAGE
     header.style.backgroundImage = `url(${
@@ -34,7 +33,7 @@ changeImgButton.forEach((button) => {
   });
 });
 
-// CHANGE BACKGROUND IMAGe EACH 10 SEC
+// CHANGE BACKGROUND IMAGE EACH 10 SEC
 function changeImgEachTenS() {
   let i = parseInt(currentImg) + 1;
   currentImg++;
@@ -51,8 +50,3 @@ function changeImgEachTenS() {
   }
 }
 setInterval(changeImgEachTenS, 3000);
-
-// BE REDIRECTED TO ALL ROOMS PAGE
-viewAllRooms.addEventListener("click", () => {
-  window.location.href = "rooms.html";
-});

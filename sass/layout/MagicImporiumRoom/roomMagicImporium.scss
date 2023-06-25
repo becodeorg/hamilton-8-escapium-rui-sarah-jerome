@@ -8,49 +8,21 @@
   @include headingColor;
 }
 
-@media (max-width: 850px) {
-  @include tableAndDesktop;
-  .magic-imporium.roomPage,
-  .others-rooms {
-    width: 90% !important;
-  }
-}
-
-@media (max-width: 560px) {
-  @include mobile;
-  .magic-imporium.roomPage {
-    flex-direction: column;
-  }
-
-  .roomPage-info,
-  .roomPage-BookNow {
-    width: 100% !important;
-  }
-  .other-rooms-display {
-    gap: 1.5rem;
-    flex-direction: column;
-  }
-  .otherRoom {
-    width: 100% !important;
-  }
-}
-
 .pages-header-text {
   @include pages-header-text;
 }
-
 header {
-  position: relative;
-  height: 50vh;
   background-image: url("/img/gallery/slide-2.jpg");
+  height: 50vh;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
   background-size: cover;
-  background-position: center;
-  h1 {
-    position: absolute;
-    bottom: 10%;
-    z-index: 1000;
-    left: 20%;
-  }
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &::after {
     content: "";
     position: absolute;
@@ -61,6 +33,115 @@ header {
     background: linear-gradient(to top, $darkest-background, rgba(0, 0, 0, 0));
   }
 }
+.top_nav {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  padding-right: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+#leftTopBar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hamburguerButton {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+#nav_links {
+  height: 5rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  li {
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $global-font-color;
+      font-weight: 700;
+      position: relative;
+      &:hover {
+        color: $white-background;
+        &::after {
+          min-width: 100%;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 40%;
+        height: 0.3rem;
+        width: 0;
+        background-color: red;
+        transform: rotate(135deg);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+#btn_nav {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 13px 34px;
+  border: solid 2.5px #cbcbcb;
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
+.header-txt {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    padding-top: 20rem;
+    padding-left: 20rem;
+  }
+}
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 3rem;
+  align-items: flex-end;
+  justify-content: center;
+  .noEffect-button {
+    width: 35px;
+    height: 3px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4b4b4b;
+  }
+  .noEffect-button.headerB {
+    &:hover {
+      cursor: pointer;
+      background-color: $white-background;
+    }
+  }
+  .active {
+    width: 50px;
+    background-color: $white-background;
+  }
+}
+
 main {
   width: 100%;
   display: flex;
@@ -112,14 +193,15 @@ main {
 .time-roomScape,
 .number-players {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 1.2rem;
   i {
     color: rgb(209, 209, 209);
+    font-size: 1.2rem;
   }
   p {
     color: rgb(141, 140, 140);
+    font-size: 1.5rem;
   }
 }
 
@@ -207,6 +289,7 @@ main {
 }
 
 .other-rooms-display {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -215,34 +298,28 @@ main {
 .otherRoom {
   position: relative;
   width: 30%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/0.8;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  * {
-    z-index: 1000;
+  gap: 1.5rem;
+  overflow: hidden;
+  .difficulty,
+  .roomInfos {
+    z-index: 4;
+    color: $pAndI;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 4;
     color: $white-background;
+    &:hover {
+      cursor: pointer;
+      color: $red;
+    }
   }
-}
-.hospital {
-  background-image: url("/img/gallery/room-5.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
-  }
-}
 
-.outside {
-  background-image: url("/img/gallery/gallery-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   &::after {
     content: "";
     position: absolute;
@@ -252,31 +329,101 @@ main {
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
   }
-}
-
-.timeTravel {
-  background-image: url("/img/gallery/room-9.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  &::after {
-    content: "";
+  .img-room {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .img-room {
+      transform: scale(1.1);
+    }
   }
 }
 
 .roomInfos {
   display: flex;
-  justify-content: space-evenly;
+  padding-bottom: 2rem;
+  gap: 2rem;
   .roomPlayers,
   .roomTime,
   .roomLocation {
     display: flex;
-
     align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.otherRoom {
+  h3,
+  .roomInfos,
+  .difficulty {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-txt {
+    h1 {
+      padding-left: 8rem;
+    }
+  }
+  .magic-imporium.roomPage,
+  .others-rooms {
+    width: 90% !important;
+  }
+  .otherRoom {
+    aspect-ratio: 1/1;
+    .roomInfos {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  @include tableAndDesktop;
+}
+
+@media (max-width: 556px) {
+  @include mobile;
+  .magic-imporium.roomPage {
+    flex-direction: column;
+  }
+  .roomPage-info,
+  .roomPage-BookNow {
+    width: 100% !important;
+  }
+  .other-rooms-display {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+  .otherRoom {
+    h3 {
+      font-size: 3rem;
+    }
+    gap: 3rem;
+    p {
+      font-size: 2rem;
+    }
+    i {
+      font-size: 1.5rem;
+    }
+    width: 100% !important;
+    .roomInfos {
+      gap: 2rem;
+      flex-direction: row;
+    }
   }
 }

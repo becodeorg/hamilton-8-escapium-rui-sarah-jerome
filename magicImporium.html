@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="/sass/layout/MagicImporiumRoom/magicImporium.css"
+      href="/sass/layout/MagicImporiumRoom/roomMagicImporium.css"
     />
+    <script src="/js/app.js" defer></script>
+    <script src="/js/menuNav.js" defer></script>
     <script
       src="https://kit.fontawesome.com/8ad7569ef1.js"
       crossorigin="anonymous"
@@ -15,7 +17,45 @@
   </head>
   <body>
     <header>
-      <h1>Magic Imporium</h1>
+      <nav role="navigation" class="top_nav">
+        <div id="leftTopBar">
+          <img src="img/logo/logo.png" id="logo_escapium" alt="logo escapium" />
+          <ul id="nav_links">
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">home</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">about</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">rooms</a>
+            </li>
+            <li class="containerLigneRed">
+              <a class="links_menu" href="#">bookings</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">blog</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">contact</a>
+            </li>
+          </ul>
+        </div>
+        <button class="hamburguerButton">^</button>
+        <a href="#" id="btn_nav">Book Now!</a>
+      </nav>
+      <div class="header-txt">
+        <h1>Magic Imporium</h1>
+        <div class="header-buttons">
+          <button data-index="0" class="noEffect-button headerB"></button>
+          <button data-index="1" class="noEffect-button headerB"></button>
+          <button
+            data-index="2"
+            class="noEffect-button headerB active"
+          ></button>
+          <button data-index="3" class="noEffect-button headerB"></button>
+        </div>
+      </div>
     </header>
     <main>
       <section class="magic-imporium roomPage">
@@ -92,10 +132,12 @@
         </article>
         <article class="other-rooms-display">
           <div class="otherRoom hospital">
-            <div class="difficultyI">
+            <div class="img-room">
+              <img src="/img/gallery/room-5.jpg" alt="" />
+            </div>
+            <div class="difficulty">
               <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
               <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
-
               <i class="fa-solid fa-lock"></i>
               <i class="fa-solid fa-lock"></i>
               <i class="fa-solid fa-lock"></i>
@@ -117,11 +159,13 @@
             </div>
           </div>
           <div class="otherRoom outside">
-            <div class="difficultyI">
+            <div class="img-room">
+              <img src="/img/gallery/gallery-1.jpg" alt="" />
+            </div>
+            <div class="difficulty">
               <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
               <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
               <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
-
               <i class="fa-solid fa-lock"></i>
               <i class="fa-solid fa-lock"></i>
             </div>
@@ -142,11 +186,13 @@
             </div>
           </div>
           <div class="otherRoom timeTravel">
-            <div class="difficultyI">
+            <div class="img-room">
+              <img src="/img/gallery/room-9.jpg" alt="" />
+            </div>
+            <div class="difficulty">
               <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
               <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
               <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
-
               <i class="fa-solid fa-lock"></i>
               <i class="fa-solid fa-lock"></i>
             </div>
