@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/sass/layout/index/index.css" />
+    <script src="/js/redirectPages.js" defer></script>
     <script src="/js/app.js" defer></script>
     <script src="/js/menuNav.js" defer></script>
     <script
@@ -16,7 +17,11 @@
     <header>
       <nav role="navigation" class="top_nav">
         <div id="leftTopBar">
-          <img src="img/logo/logo.png" id="logo_escapium" alt="logo escapium" />
+          <img
+            src="/img/logo/logo.png"
+            id="logo_escapium"
+            alt="logo escapium"
+          />
           <ul id="nav_links">
             <li class="containerLigneRed">
               <a href="#" class="links_menu">home</a>
@@ -405,5 +410,12 @@
         <button class="bookRoomButton">Book your Escape</button>
       </section>
     </main>
+    <script>
+      const viewAllRooms = document.querySelector(".viewRooms");
+      // BE REDIRECTED TO ALL ROOMS PAGE
+      viewAllRooms.addEventListener("click", () => {
+        window.location.href = "/html/rooms.html";
+      });
+    </script>
   </body>
 </html>

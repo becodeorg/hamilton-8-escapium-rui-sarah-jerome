@@ -35,7 +35,7 @@
 
 header {
   background-image: url("/img/gallery/slide-2.jpg");
-  height: 50vh;
+  height: 75vh;
   align-items: center;
   gap: 1.5rem;
   position: relative;
@@ -132,10 +132,10 @@ header::after {
   z-index: 999;
 }
 .header-txt h1 {
-  font-size: 5rem;
+  font-size: 8rem;
   font-weight: bold;
-  padding-top: 20rem;
-  padding-left: 20rem;
+  padding-top: 40rem;
+  padding-left: 25rem;
 }
 
 .header-buttons {
