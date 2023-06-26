@@ -1,3 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +95,27 @@
 }
 * p {
   color: #717171;
+}
+@font-face {
+  font-family: "hindi";
+  src: url("../../fonts/hind/regular.ttf") format("tft");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserrat";
+  src: url("../../fonts/montserrat/regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+* * h1,
+* * h2,
+* * h3,
+* * h4 {
+  font-family: "montserrat";
+}
+* * p {
+  font-family: "hindi";
 }
 
 @media (min-width: 750px) {
@@ -575,6 +676,7 @@ main {
   border-bottom: 1px solid #f60b0e;
   padding-bottom: 0.2rem;
 }
+
 .blog-post {
   display: flex;
   flex-direction: column;
@@ -806,7 +908,7 @@ main {
   aspect-ratio: 1/1;
 }
 .get-in-touch .form {
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -874,4 +976,207 @@ main {
 .bookRoomButton:hover {
   cursor: pointer;
   background-color: #800202;
+}
+
+Footer {
+  background-image: url("https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/Room7-Dark.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+Footer .FooterInfos {
+  margin-top: 5%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+Footer .Footercolumns {
+  width: 23%;
+}
+Footer .Footercolumns h1 {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #fefefe;
+  margin-bottom: 7.5%;
+}
+Footer .Footercolumns li {
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #717171;
+}
+Footer .Footercolumns:nth-child(1) li {
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+Footer .Footercolumns:nth-child(1) .Footerdash {
+  font-size: x-large;
+  opacity: 0.5;
+  position: relative;
+}
+Footer .Footercolumns:nth-child(1) .Footerdash::after {
+  content: "01";
+  font-size: 16px;
+  font-family: "Hind";
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #717171;
+}
+Footer .Footercolumns:nth-child(2) li {
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+Footer .Footercolumns:nth-child(2) .Footerdash {
+  font-size: x-large;
+  opacity: 0.5;
+  position: relative;
+}
+Footer .Footercolumns:nth-child(2) .Footerdash::after {
+  content: "02";
+  font-size: 16px;
+  font-family: "Hind";
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #717171;
+}
+Footer .Footercolumns:nth-child(3) li {
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+Footer .Footercolumns:nth-child(3) .FooterWorkingHours {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+Footer .Footercolumns:nth-child(3) .FooterWorkingHours .FooterWorkingHoursDays:nth-child(1) {
+  width: 45%;
+}
+Footer .Footercolumns:nth-child(3) .FooterWorkingHours .FooterWorkingHoursDays:nth-child(2) {
+  width: 45%;
+}
+Footer .Footercolumns:nth-child(3) .Footerdash {
+  font-size: x-large;
+  opacity: 0.5;
+  position: relative;
+}
+Footer .Footercolumns:nth-child(3) .Footerdash::after {
+  content: "03";
+  font-size: 16px;
+  font-family: "Hind";
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #717171;
+}
+Footer .Footercolumns:nth-child(4) ul {
+  display: flex;
+  flex-direction: row;
+}
+Footer .Footercolumns:nth-child(4) .FooterSocialMedia {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #717171;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+Footer .Footercolumns:nth-child(4) .Footerdash {
+  font-size: x-large;
+  opacity: 0.5;
+  position: relative;
+}
+Footer .Footercolumns:nth-child(4) .Footerdash::after {
+  content: "04";
+  font-size: 16px;
+  font-family: "Hind";
+  position: absolute;
+  font-weight: 500;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #717171;
+}
+Footer .FooterCopyright {
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  border-top: 2px #434343 solid;
+}
+Footer .FooterCopyright img {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+Footer .FooterCopyright p {
+  font-size: 11px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #717171;
+}
+
+@media (max-width: 800px) {
+  Footer .FooterInfos {
+    width: 90%;
+  }
+  Footer .Footercolumns {
+    width: 23%;
+  }
+  Footer .Footercolumns:nth-child(3) .FooterWorkingHoursDays:nth-child(1) {
+    line-height: 145%;
+  }
+  Footer .Footercolumns:nth-child(3) .FooterWorkingHoursDays:nth-child(2) {
+    width: 45%;
+    margin-left: 20%;
+  }
+  Footer .Footercolumns:nth-child(4) .FooterSocialMedia {
+    width: 25px;
+    height: 25px;
+    font-size: medium;
+  }
+}
+@media (max-width: 425px) {
+  Footer .FooterInfos {
+    flex-direction: column;
+  }
+  Footer .FooterInfos .Footercolumns {
+    width: 75%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  Footer .FooterInfos .Footercolumns .Footerdash {
+    width: 100%;
+    left: 20px;
+    top: -10px;
+  }
+  Footer .FooterInfos .Footercolumns .Footerdash::after {
+    left: 30px;
+  }
 }/*# sourceMappingURL=index.css.map */
