@@ -1,4 +1,8 @@
 const navBarLi = document.querySelectorAll(".links_menu");
+const bookNow = document.querySelector(".btn_nav");
+bookNow.addEventListener("click", () => {
+  window.location.href = "/html/rooms.html";
+});
 
 navBarLi.forEach((a) => {
   a.addEventListener("click", () => {

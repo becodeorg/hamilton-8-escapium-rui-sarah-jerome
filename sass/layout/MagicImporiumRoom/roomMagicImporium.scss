@@ -142,11 +142,15 @@ header {
 .btn_nav {
   color: #ffffff;
   text-decoration: none;
-  padding: 13px 34px;
+  padding: 1rem 3rem;
   border: solid 2.5px #cbcbcb;
   border-radius: 30px;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 18px;
+  &:hover {
+    border: 2.5px solid $dark-background;
+    background-color: rgb(53, 52, 52);
+  }
 }
 
 .header-txt {
