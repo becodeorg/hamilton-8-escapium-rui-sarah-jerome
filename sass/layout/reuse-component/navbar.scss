@@ -1,0 +1,172 @@
+.navbar{
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    margin-right: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $nav-background;
+
+    img{
+        height: 100%;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        margin-right:1.5%;
+        .ul-menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%; 
+            .li-menu{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 15%;
+                a{
+                    font-size: 1.5rem;
+                    color: $global-font-color;
+                    text-align: center;
+                    font-family: $hind;
+                    font-weight: 600;
+                }
+                
+                i{
+                    font-size: 1.5rem;
+                    color: $global-font-color;
+                    text-align: center;
+                    font-family: $hind;
+                    font-weight: 600;
+                }
+                .fa-plus{
+                    display: none;
+                }
+
+            }
+            .menu-active{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 15%;
+                .rouge{
+                    width: 70px;
+                    height: 2px;
+                    transform: rotate(-45deg);
+                    background-color: $red;
+                    position: absolute;
+                    z-index: -1;
+                }
+                .active{
+                    z-index: 3;
+                    text-align: center;
+                    color: $white-background;
+                    a{
+                        font-size: 1.5rem;
+                        color: $global-font-color;
+                        text-align: center;
+                        font-family: $hind;
+                        font-weight: 600;
+                    }
+                    
+                    i{
+                        font-size: 1.5rem;
+                        color:  $global-font-color;
+                        text-align: center;
+                        font-family: $hind;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .other{
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 15%;
+            .book{
+                width: 100%;
+                border: solid $white-background 1px;
+                padding: 1.5%;
+                border-radius: 30px;
+                font-size: 1.5rem;
+                color: $global-font-color;
+                text-align: center;
+                font-family: $hind;
+                font-weight: 600;
+            }
+        }
+    }
+    .menu-burger{
+        display: none;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 4;
+        .bar{
+            width: 40px;
+            height: 3px;
+            background-color: $white-background;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen  and (max-width:1265px){
+    .navbar{
+        margin: 0;
+        .menu{
+            .ul-menu{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                height: 100vh;
+                width: 50%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $dark-background;
+                padding-top: 2%;
+                left: -100%;
+                transition: all 0.8s ease;
+                .li-menu{
+                    border-bottom: solid $global-font-color 2px;
+                    width: 100%;
+                    text-align: left;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px;
+                    i{
+                        display: block;
+                    }
+                }
+                .menu-active{
+                    .rouge{
+                        display: none;
+                    }
+                }
+            }
+            .other{
+                display: none;
+            }
+            .mobile-menu{
+                left:0;
+            }
+        }
+        .menu-burger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            cursor: pointer;
+            margin-right: 1.5%;
+        }
+    }
+
+}

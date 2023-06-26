@@ -1,8 +1,12 @@
-$darkest-background: #000000;
-$nav-font-links-desktop: #FFFFFF;
-$headings: 'Arial', sans-serif;
-$red: #FF0000;
-$white-font: #FFFFFF;
-$dark-background: #000000;
-$global-font-color: #CBCBCB;
-$white-background: #FFFFFF;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+$red: #f60b0e;
+$darkest-background: #1b1b1b;
+$dark-background: #222222;
+$white-background: #fefefe;
+$global-font-color: #717171;
+$nav-font-color: #777;
+$montserrat: Montserrat;
+$hind: Hind;
+$nav-background:rgba(0, 0, 0, 0.24);
