@@ -296,12 +296,54 @@ td, th {
   font-family: "Hind";
 }
 .AboutPageSection6 .AboutPageSection6Carousel {
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-bottom: 5%;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.AboutPageSection6 .AboutPageSection6Carousel img {
+  width: 300px;
+  height: 300px;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide {
+  margin-top: 7.5%;
+  margin-bottom: 7.5%;
+  width: 50%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid white;
+  color: #717171;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide p {
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  display: block;
+  color: #717171;
+  font-size: 16px;
+  font-family: "Montserrat";
+  letter-spacing: 0.5px;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide img {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  width: 70px;
+  height: auto;
+  border-radius: 50px;
 }
 .AboutPageSection6 .AboutPageSection6Carousel ul {
   margin-top: 2.5%;
@@ -310,6 +352,14 @@ td, th {
 .AboutPageSection6 .AboutPageSection6Carousel li {
   display: inline;
   font-size: 30px;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .fa-arrow-left-long,
+.AboutPageSection6 .AboutPageSection6Carousel .fa-arrow-right-long {
+  color: #717171;
+}
+.AboutPageSection6 .AboutPageSection6Carousel .fa-arrow-right-long:hover,
+.AboutPageSection6 .AboutPageSection6Carousel .fa-arrow-left-long:hover {
+  color: #fefefe;
 }
 .AboutPageSection6 .AboutPageSection6Carousel .fa-arrow-left-long {
   margin-right: 75px;
@@ -327,32 +377,6 @@ td, th {
   background-color: #717171;
   z-index: -1;
   overflow: hidden;
-}
-.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide {
-  margin-top: 7.5%;
-  margin-bottom: 7.5%;
-  width: 47.5%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: #717171;
-}
-.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide p {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-.AboutPageSection6 .AboutPageSection6Carousel .AboutPageSection6CarouselSlide img {
-  margin-top: 10%;
-  margin-bottom: 5%;
 }
 
 .AboutPageSection7 {
@@ -374,10 +398,15 @@ td, th {
   color: #1B1B1B;
 }
 .AboutPageSection7 p {
+  display: none;
+}
+.AboutPageSection7 .visible {
+  display: block;
   color: #717171;
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 2%;
-  font-family: "Hind";
+  font-family: "Montserrat";
+  margin-bottom: 5%;
 }
 .AboutPageSection7 .AboutPageSection7FAQs {
   margin-top: 5%;
@@ -404,35 +433,36 @@ td, th {
 }
 .AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus {
   background-color: #dedede;
-  position: relative;
+  color: #717171;
   width: 50px;
   height: 50px;
   border-radius: 50px;
   margin-right: 20px;
+  top: -12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  position: relative;
 }
-.AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  width: 50%;
-  height: 2px;
-  background-color: #a1a1a1;
+.AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus .Plus {
   z-index: 1;
-  overflow: hidden;
-}
-.AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus::after {
-  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 2px;
-  background-color: #a1a1a1;
+}
+.AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus .Moins {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
-  overflow: hidden;
+  display: none;
+  background-color: #dedede;
+  color: #717171;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.AboutPageSection7 .AboutPageSection7cards .AboutPageSection7PlusMinus .MinusVisible {
+  display: flex;
 }
 .AboutPageSection7 .AboutPageSection7QA {
   width: 85%;
