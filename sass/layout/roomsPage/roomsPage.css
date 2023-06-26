@@ -115,7 +115,14 @@ header::after {
 }
 
 .hamburguerButton {
+  position: absolute;
+  right: 5%;
   display: none;
+}
+
+.col {
+  height: 100vh;
+  flex-direction: column;
 }
 
 .display {

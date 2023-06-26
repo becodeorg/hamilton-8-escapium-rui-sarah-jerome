@@ -16,13 +16,13 @@
   <body>
     <header>
       <nav role="navigation" class="top_nav">
-        <div id="leftTopBar">
+        <div class="leftTopBar">
           <img
             src="/img/logo/logo.png"
             id="logo_escapium"
             alt="logo escapium"
           />
-          <ul id="nav_links">
+          <ul class="nav_links">
             <li class="containerLigneRed">
               <a href="#" class="links_menu">home</a>
             </li>
@@ -43,13 +43,15 @@
             </li>
           </ul>
         </div>
-        <button class="hamburguerButton">^</button>
-        <a href="#" id="btn_nav">Book Now!</a>
+        <button class="hamburguerButton">
+          <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+        </button>
+        <a href="#" class="btn_nav">Book Now!</a>
       </nav>
       <div class="header-content">
         <div class="header-txt">
           <h1>Escape in 60 mins?</h1>
-          <p>VIEW OUR ROOMS</p>
+          <p class="viewRooms">VIEW OUR ROOMS</p>
         </div>
         <div class="header-buttons">
           <button data-index="0" class="noEffect-button headerB"></button>
@@ -296,7 +298,10 @@
             </div>
             <p class="topic-post">Basics</p>
             <button class="noEffect-button"></button>
-            <h3>Team Building</h3>
+            <h3>
+              Team <br />
+              Building
+            </h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
               officiis voluptate officia sed totam dolorum nisi, dolorem debitis
@@ -306,7 +311,36 @@
           </article>
         </section>
       </section>
-      <section class="who-can-play">arroz</section>
+      <section class="who-can-play">
+        <div class="overlay"></div>
+        <div class="who-can-play-container">
+          <div class="wcp-container-left">
+            <p>WHO CAN PLAY</p>
+          </div>
+          <div class="wcp-container-right">
+            <div class="friends">
+              <i class="fa-solid fa-user-group" style="color: #ff0000"></i>
+              <p>FRIENDS & FAMILY</p>
+            </div>
+            <div class="team">
+              <i
+                class="fa-sharp fa-solid fa-suitcase"
+                style="color: #ff0000"
+              ></i>
+              <p>TEAM & CO-WORKERS</p>
+            </div>
+            <div class="game">
+              <i class="fa-solid fa-gamepad" style="color: #ff0000"></i>
+              <p>GAME LOVERS</p>
+            </div>
+            <div class="tourists">
+              <i class="fa-solid fa-plane-up" style="color: #fa0000"></i>
+              <p>TOURISTS</p>
+            </div>
+          </div>
+        </div>
+        <div class="wcp-img-container"></div>
+      </section>
       <section class="photos-gallery-container">
         <button class="noEffect-button"></button>
         <h2>Photo Shots</h2>
@@ -411,10 +445,12 @@
       </section>
     </main>
     <script>
-      const viewAllRooms = document.querySelector(".viewRooms");
+      const viewAllRooms = document.querySelectorAll(".viewRooms");
       // BE REDIRECTED TO ALL ROOMS PAGE
-      viewAllRooms.addEventListener("click", () => {
-        window.location.href = "/html/rooms.html";
+      viewAllRooms.forEach((button) => {
+        button.addEventListener("click", () => {
+          window.location.href = "/html/rooms.html";
+        });
       });
     </script>
   </body>

@@ -8,21 +8,146 @@
   @include headingColor;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 750px) {
   @include tableAndDesktop;
+}
+@media (max-width: 770px) {
+  header {
+    height: 65vh !important;
+  }
+  .header-content {
+    justify-content: center !important;
+    align-items: center;
+  }
+  .header-txt {
+    align-items: center !important;
+    gap: 2rem !important;
+    width: auto !important;
+    padding-left: 0 !important;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  .header-buttons {
+    display: none !important;
+  }
+  .featuredRoom {
+    padding: 0 !important;
+    background-color: #222222 !important;
+    width: 60% !important;
+    position: relative;
+    display: flex;
+    flex-direction: column !important;
+    .roomDetails,
+    .snd {
+      box-shadow: none !important;
+      background-color: none !important;
+      width: 100% !important;
+    }
+    .room-img {
+      width: 100% !important;
+    }
+  }
+  .posts {
+    flex-wrap: wrap !important;
+    width: 95% !important;
+  }
+  .blog-post {
+    width: calc(50% - 3rem) !important;
+  }
+  .photos-gallery {
+    padding: 1rem !important;
+    width: 100% !important;
+  }
+  .img-container {
+    width: calc(50% - 0.5rem) !important;
+  }
+  .testimonials-left {
+    p {
+      padding-bottom: 3.5rem !important;
+    }
+  }
+  #contactForm {
+    width: 90% !important;
+  }
 }
 
 @media (max-width: 560px) {
   @include mobile;
 }
 
-.pages-header-text {
-  @include pages-header-text;
-}
-
-@media only screen and (max-width: 440px) {
-  #btn_nav {
-    display: none;
+@media only screen and (max-width: 415px) {
+  .featuredRoom {
+    width: 100% !important;
+  }
+  .how-it-works {
+    .how-it-works-info {
+      width: 95%;
+      flex-direction: column;
+      gap: 4rem;
+      .info-container {
+        padding: 0;
+      }
+    }
+  }
+  .testimonials {
+    .testimonials-container {
+      padding: 0;
+      width: 95%;
+      .testimonials-left {
+        display: none;
+      }
+      .testimonials-right {
+        p {
+          font-size: 2rem;
+        }
+        img {
+          width: 10rem;
+        }
+      }
+    }
+    .buttons-testimonials {
+      display: none;
+    }
+  }
+  .latest-blog-posts {
+    .posts {
+      flex-direction: column;
+      .blog-post {
+        width: 100% !important;
+      }
+    }
+  }
+  .photos-gallery {
+    .img-container {
+      .img-container-social {
+        right: 25%;
+      }
+    }
+  }
+  .who-can-play {
+    height: 40vh !important;
+    .who-can-play-container {
+      left: 5% !important;
+      .wcp-container-left {
+        display: none;
+      }
+    }
+    .wcp-img-container {
+      height: 100% !important;
+      width: 100% !important;
+      background-position: left !important;
+    }
+  }
+  .get-in-touch {
+    flex-direction: column;
+    #map {
+      width: 100% !important;
+    }
+    .form {
+      width: 100% !important;
+      padding-left: 0.5rem !important;
+    }
   }
 }
 
@@ -51,7 +176,7 @@ header {
   position: absolute;
   z-index: 9999;
   top: 0;
-  margin-right: 3rem;
+  padding-right: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -59,21 +184,58 @@ header {
   background-color: rgba(0, 0, 0, 0.24);
 }
 
-#leftTopBar {
+.leftTopBar {
   display: flex;
   align-items: center;
   gap: 3rem;
 }
 
+.col {
+  flex-direction: column;
+  width: 100%;
+  padding-left: 2rem;
+  align-items: center;
+}
+
 .hamburguerButton {
+  position: absolute;
+  right: 5%;
   display: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  i {
+    font-size: 3rem;
+  }
+}
+.click {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: black;
+
+  * {
+    z-index: 1001;
+  }
 }
 
 .display {
   display: block;
 }
 
-#nav_links {
+.noDisplayNav {
+  display: none;
+}
+
+.noDisplayB {
+  display: none;
+}
+
+.nav_links {
   height: 5rem;
   list-style-type: none;
   display: flex;
@@ -112,7 +274,7 @@ header {
   display: inline-block;
 }
 
-#btn_nav {
+.btn_nav {
   color: #ffffff;
   text-decoration: none;
   padding: 13px 34px;
@@ -120,7 +282,6 @@ header {
   border-radius: 30px;
   font-weight: 900;
   font-size: 14px;
-  letter-spacing: -0.5px;
 }
 
 .header-content {
@@ -192,7 +353,7 @@ main {
   display: flex;
   align-items: center;
   .snd {
-    box-shadow: 7px 7px 15px rgba(12, 12, 12, 0.945) !important;
+    box-shadow: 7px 7px 15px rgba(12, 12, 12, 0.945);
   }
   .roomDetails {
     padding: 5rem 2rem;
@@ -221,6 +382,7 @@ main {
       width: 100%;
       transition: transform 0.3s;
       aspect-ratio: 1/0.6;
+      display: block;
       &:hover {
         transform: scale(1.1);
       }
@@ -454,7 +616,72 @@ main {
 }
 
 .who-can-play {
+  height: 50vh;
+  position: relative;
+  width: 100%;
   background-color: $dark-background;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      83deg,
+      rgba(34, 34, 34, 1) 39%,
+      rgba(9, 9, 121, 0) 100%,
+      rgba(0, 212, 255, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+  .who-can-play-container {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    gap: 5rem;
+    left: 20%;
+    top: 20%;
+  }
+  .wcp-container-left {
+    p {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 2rem;
+    }
+  }
+  .wcp-container-right {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    .friends,
+    .team,
+    .game,
+    .tourists {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      i {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 2rem;
+        color: $white-background;
+      }
+    }
+  }
+  .wcp-img-container {
+    width: 60%;
+    height: 65%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url("/img/gallery/room-7.jpg");
+    background-position: 55% 25%;
+    opacity: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .photos-gallery-container {
@@ -535,7 +762,7 @@ main {
   .form {
     padding: 5rem 0;
     display: flex;
-    width: 40%;
+    width: 50%;
     flex-direction: column;
     gap: 3rem;
   }
