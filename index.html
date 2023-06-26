@@ -99,7 +99,7 @@
               facilis odit inventore, eaque doloremque. Ipsa culpa laudantium
               explicabo aspernatur et minus quo dolorum.
             </p>
-            <button>Read More</button>
+            <button class="soloRoom">Read More</button>
           </div>
           <div class="room-img">
             <img src="/img/gallery/slide-2.jpg" alt="" />
@@ -595,6 +595,12 @@
       // Load the map when the page finishes loading
       window.addEventListener("load", function () {
         initMap();
+      });
+    </script>
+    <script>
+      const viewSoloRoom = document.querySelector(".soloRoom ");
+      viewSoloRoom.addEventListener("click", () => {
+        window.location.href = "html/magicImporium.html";
       });
     </script>
   </body>
