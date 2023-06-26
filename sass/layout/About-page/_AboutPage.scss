@@ -1,0 +1,1035 @@
+@import "../../variables/colors&fonts";
+@import "../../mixins/minireset";
+@import "../../mixins/mixing";
+@import "../../variables/variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @include headingColor;
+  @include fonts;
+}
+.top_nav {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  padding-right: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.leftTopBar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.col {
+  flex-direction: column;
+  width: 100%;
+  padding-left: 2rem;
+  align-items: center;
+}
+
+.hamburguerButton {
+  position: absolute;
+  right: 5%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  i {
+    font-size: 3rem;
+  }
+}
+.click {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: black;
+
+  * {
+    z-index: 1001;
+  }
+}
+
+.display {
+  display: block;
+}
+
+.noDisplayNav {
+  display: none;
+}
+
+.noDisplayB {
+  display: none;
+}
+
+.nav_links {
+  height: 5rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  li {
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $global-font-color;
+      font-weight: 700;
+      position: relative;
+      &:hover {
+        color: $white-background;
+        &::after {
+          min-width: 100%;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 40%;
+        height: 0.3rem;
+        width: 0;
+        background-color: red;
+        transform: rotate(135deg);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.containerLigneRed {
+  position: relative;
+  display: inline-block;
+}
+
+.btn_nav {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border: solid 2.5px #cbcbcb;
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 18px;
+  &:hover {
+    border: 2.5px solid $dark-background;
+    background-color: rgb(53, 52, 52);
+  }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+.header-txt {
+  padding-left: 10rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  p {
+    &:hover {
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 3rem;
+  align-items: flex-end;
+  justify-content: center;
+  .noEffect-button.headerB {
+    &:hover {
+      cursor: pointer;
+      background-color: $white-background;
+    }
+  }
+  .active {
+    width: 50px;
+    background-color: $white-background;
+  }
+}
+
+.AboutPageSection1 {
+  background-image: url("https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/slide-1.jpg?raw=true");
+  background-size: cover;
+  background-position: center 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+
+  h2 {
+    font-size: 44px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: $White-background;
+    margin-bottom: 10px;
+  }
+
+  li {
+    display: inline;
+    font-size: 16px;
+    font-family: "Hind";
+  }
+
+  a {
+    text-decoration: none;
+    color: $Global-font-color;
+
+    &:hover {
+      color: $White-background;
+    }
+  }
+}
+
+.AboutPageSection2 {
+  background-color: $Darkest-background;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 44px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: $White-background;
+    margin-bottom: 0%;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: $White-background;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: "Hind";
+    font-weight: 400;
+    color: $Global-font-color;
+  }
+
+  .fa-minus {
+    font-size: 30px;
+    margin-bottom: 2.5%;
+    margin-top: 10%;
+  }
+
+  .AboutPageSection2Instructions {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    .AboutPageSection2InstructionsCard {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10%;
+
+      p {
+        text-align: center;
+        margin-top: 5%;
+      }
+    }
+
+    .InstructionsLogo {
+      position: relative;
+      background-color: $Dark-background;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px $Global-font-color solid;
+      border-radius: 50px;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 175%;
+        height: 2px;
+        background-color: $Global-font-color;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .InstructionLogoCircle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background-color: $Dark-background;
+        z-index: 1;
+      }
+
+      i {
+        font-size: 45px;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.AboutPageSection3 {
+  background-color: $Dark-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .AboutPageSection3Img {
+    img {
+      z-index: 1;
+    }
+  }
+
+  .AboutPageSection3ImgPlayButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: red;
+    font-size: xx-large;
+    z-index: 2;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 255);
+  }
+}
+
+.AboutPageSection4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $Darkest-background;
+
+  .fa-minus {
+    font-size: 30px;
+    margin-top: 7.5%;
+    margin-bottom: 2.5%;
+  }
+
+  h2 {
+    font-size: 44px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: $White-background;
+  }
+
+  .AboutPageSection4Certificates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+
+    .Certificate {
+      width: 23%;
+    }
+  }
+}
+
+.AboutPageSection5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $Dark-background;
+
+  .fa-minus {
+    font-size: 30px;
+    margin-bottom: 2.5%;
+    margin-top: 7.5%;
+  }
+
+  h2 {
+    font-size: 44px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: $White-background;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: $White-background;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: $Nav-font-color;
+  }
+
+  .AboutPageSection5OurTeam {
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .AboutPageSection5OurTeamMember {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .Section5TeamMemberName {
+        margin-top: 5%;
+        flex-direction: column;
+        width: 90%;
+        display: flex;
+        justify-content: start;
+      }
+    }
+  }
+}
+
+.AboutPageSection6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $Darkest-background;
+
+  .fa-minus {
+    font-size: 30px;
+    margin-top: 7.5%;
+    margin-bottom: 2.5%;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: $White-background;
+  }
+
+  a {
+    color: $Red;
+    margin-top: 2%;
+    font-family: "Hind";
+  }
+
+  .AboutPageSection6Carousel {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+
+    .AboutPageSection6CarouselContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .AboutPageSection6CarouselSlide {
+      margin-top: 7.5%;
+      margin-bottom: 7.5%;
+      width: 50%;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid white;
+      color: $Global-font-color;
+
+      p {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+        display: block;
+        color: $Global-font-color;
+        font-size: 16px;
+        font-family: "Montserrat";
+        letter-spacing: 0.5px;
+      }
+
+      img {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        width: 70px;
+        height: auto;
+        border-radius: 50px;
+      }
+    }
+
+    ul {
+      margin-top: 2.5%;
+      margin-bottom: 7.5%;
+    }
+
+    li {
+      display: inline;
+      font-size: 30px;
+    }
+
+    .fa-arrow-left-long,
+    .fa-arrow-right-long {
+      color: #717171;
+    }
+
+    .fa-arrow-right-long:hover,
+    .fa-arrow-left-long:hover {
+      color: $White-background;
+    }
+
+    .fa-arrow-left-long {
+      margin-right: 75px;
+      position: relative;
+      z-index: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 235%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 220%;
+        height: 1px;
+        background-color: $Global-font-color;
+        z-index: -1;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.AboutPageSection7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $White-background;
+
+  .fa-minus {
+    font-size: 30px;
+    margin-top: 7.5%;
+    margin-bottom: 2.5%;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: $Darkest-background;
+  }
+
+  p {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+    color: $Global-font-color;
+    font-size: 16px;
+    margin-top: 2%;
+    font-family: "Montserrat";
+    margin-bottom: 5%;
+  }
+
+  .AboutPageSection7FAQs {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .AboutPageSection7cards {
+    margin-top: 2.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 20px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      color: $Darkest-background;
+    }
+
+    .AboutPageSection7PlusMinus {
+      background-color: #dedede;
+      color: $Global-font-color;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      margin-right: 20px;
+      top: -12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: x-large;
+      position: relative;
+
+      .Plus {
+        z-index: 1;
+        position: absolute;
+      }
+
+      .Moins {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        display: none;
+        background-color: #dedede;
+        color: $Global-font-color;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+      }
+
+      .MinusVisible {
+        display: flex;
+      }
+    }
+  }
+
+  .AboutPageSection7QA {
+    width: 85%;
+  }
+}
+
+Footer {
+  @include background-img-cover-center(
+    "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/Room7-Dark.png?raw=true"
+  );
+  background-color: $Dark-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .FooterInfos {
+    margin-top: 5%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .Footercolumns {
+    width: 23%;
+    h1 {
+      font-size: 16px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      color: $White-background;
+      margin-bottom: 7.5%;
+    }
+
+    li {
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      color: $Global-font-color;
+    }
+  }
+
+  .Footercolumns:nth-child(1) {
+    li {
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "01";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(2) {
+    li {
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "02";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(3) {
+    li {
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .FooterWorkingHours {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .FooterWorkingHoursDays:nth-child(1) {
+        width: 45%;
+      }
+      .FooterWorkingHoursDays:nth-child(2) {
+        width: 45%;
+      }
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "03";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(4) {
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .FooterSocialMedia {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      background-color: $Global-font-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: large;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "04";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .FooterCopyright {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    border-top: 2px #434343 solid;
+
+    img {
+      margin-top: 2.5%;
+      margin-bottom: 2.5%;
+    }
+
+    p {
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      color: $Global-font-color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .AboutPageSection2 {
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .AboutPageSection2Instructions {
+      width: 95%;
+      margin-top: 0;
+
+      .AboutPageSection2InstructionsCard {
+        width: 32%;
+      }
+    }
+  }
+
+  .AboutPageSection4 {
+    .AboutPageSection4Certificates {
+      width: 90%;
+    }
+    .Certificate {
+      width: 24%;
+    }
+  }
+
+  .AboutPageSection5 {
+    .AboutPageSection5OurTeam {
+      width: 90%;
+
+      .AboutPageSection5OurTeamMember {
+        width: 32%;
+      }
+    }
+  }
+
+  .AboutPageSection6 {
+    .AboutPageSection6Carousel {
+      width: 90%;
+
+      .AboutPageSection6CarouselSlide {
+        width: 49%;
+      }
+    }
+  }
+
+  .AboutPageSection7 {
+    .AboutPageSection7FAQs {
+      width: 70%;
+    }
+  }
+
+  Footer {
+    .FooterInfos {
+      width: 90%;
+    }
+
+    .Footercolumns {
+      width: 23%;
+    }
+
+    .Footercolumns:nth-child(3) {
+      .FooterWorkingHoursDays:nth-child(1) {
+        line-height: 145%;
+      }
+
+      .FooterWorkingHoursDays:nth-child(2) {
+        width: 45%;
+        margin-left: 20%;
+      }
+    }
+
+    .Footercolumns:nth-child(4) {
+      .FooterSocialMedia {
+        width: 25px;
+        height: 25px;
+        font-size: medium;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .AboutPageSection1 {
+    h2 {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    ol {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    li {
+      display: inline-block;
+      font-size: 11px;
+      font-family: "Hind";
+      color: $Global-font-color;
+
+      i {
+        margin-right: 6px;
+        font-size: medium;
+      }
+    }
+  }
+
+  .AboutPageSection2 {
+    h2 {
+      margin-bottom: 15%;
+    }
+    .AboutPageSection2Instructions {
+      flex-direction: column;
+      align-items: center;
+
+      .AboutPageSection2InstructionsCard {
+        margin-top: 5%;
+        width: 90%;
+      }
+    }
+  }
+
+  .AboutPageSection3 {
+    .AboutPageSection3ImgPlayButton {
+      width: 50px;
+      height: 50px;
+      font-size: medium;
+    }
+  }
+
+  .AboutPageSection4 {
+    .AboutPageSection4Certificates {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+
+      .Certificate {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 7.5%;
+      }
+    }
+  }
+
+  .AboutPageSection5 {
+    .AboutPageSection5OurTeam {
+      flex-direction: column;
+      align-items: center;
+
+      .AboutPageSection5OurTeamMember {
+        width: 90%;
+        margin-top: 7.5%;
+        margin-bottom: 10%;
+        .Section5TeamMemberName {
+          align-items: center;
+          h3 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  Footer {
+    .FooterInfos {
+      flex-direction: column;
+
+      .Footercolumns {
+        width: 75%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+
+        .Footerdash {
+          width: 100%;
+          left: 20px;
+          top: -10px;
+
+          &::after {
+            left: 30px;
+          }
+        }
+      }
+    }
+  }
+}

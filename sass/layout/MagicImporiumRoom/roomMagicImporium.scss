@@ -1,0 +1,727 @@
+@import "../../variables/variables.scss";
+@import "../../mixins/mixins.scss";
+@import "../../variables/colors&fonts";
+@import "../../mixins/minireset";
+@import "../../mixins/mixing";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @include headingColor;
+  @include fonts;
+}
+
+.pages-header-text {
+  @include pages-header-text;
+}
+header {
+  background-image: url("/img/gallery/slide-2.jpg");
+  height: 75vh;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, $darkest-background, rgba(0, 0, 0, 0));
+  }
+}
+.top_nav {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  padding-right: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.leftTopBar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.col {
+  flex-direction: column;
+  width: 100%;
+  padding-left: 2rem;
+  align-items: center;
+}
+
+.hamburguerButton {
+  position: absolute;
+  right: 5%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  i {
+    font-size: 3rem;
+  }
+}
+.click {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: black;
+
+  * {
+    z-index: 1001;
+  }
+}
+
+.display {
+  display: block;
+}
+
+.noDisplayNav {
+  display: none;
+}
+
+.noDisplayB {
+  display: none;
+}
+
+.nav_links {
+  height: 5rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  li {
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $global-font-color;
+      font-weight: 700;
+      position: relative;
+      &:hover {
+        color: $white-background;
+        &::after {
+          min-width: 100%;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 40%;
+        height: 0.3rem;
+        width: 0;
+        background-color: red;
+        transform: rotate(135deg);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.containerLigneRed {
+  position: relative;
+  display: inline-block;
+}
+
+.btn_nav {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border: solid 2.5px #cbcbcb;
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 18px;
+  &:hover {
+    border: 2.5px solid $dark-background;
+    background-color: rgb(53, 52, 52);
+  }
+}
+
+.header-txt {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  h1 {
+    font-size: 8rem;
+    font-weight: bold;
+    padding-top: 40rem;
+    padding-left: 25rem;
+  }
+}
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 3rem;
+  align-items: flex-end;
+  justify-content: center;
+  .noEffect-button {
+    width: 35px;
+    height: 3px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4b4b4b;
+  }
+  .noEffect-button.headerB {
+    &:hover {
+      cursor: pointer;
+      background-color: $white-background;
+    }
+  }
+  .active {
+    width: 50px;
+    background-color: $white-background;
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $darkest-background;
+  padding: 5rem 0;
+}
+
+.magic-imporium.roomPage {
+  width: 80%;
+  display: flex;
+  gap: 2rem;
+  text-align: justify;
+}
+
+.roomPage-info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.roomPage-info-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.roomPage-info-top-difficulty,
+.roomPage-info-top-players,
+.roomPage-info-top-time {
+  width: calc(100% - 66%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.7rem;
+
+  p {
+    font-weight: bold;
+    color: $white-background;
+  }
+}
+
+.difficulty,
+.time-roomScape,
+.number-players {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  i {
+    color: rgb(209, 209, 209);
+    font-size: 1.2rem;
+  }
+  p {
+    color: rgb(141, 140, 140);
+    font-size: 1.5rem;
+  }
+}
+
+.difficulty {
+  gap: 0.5rem;
+}
+
+.roomPage-info-top-difficulty,
+.roomPage-info-top-players {
+  border-right: 1px solid $global-font-color;
+}
+
+.roomPage-BookNow {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  i {
+    color: rgb(209, 209, 209);
+  }
+  p {
+    &:hover {
+      cursor: pointer;
+      color: rgb(209, 209, 209);
+    }
+  }
+  button {
+    margin-top: 2rem;
+    width: 10rem;
+    font-weight: bold;
+    max-height: 4rem;
+    background-color: $red;
+    border: none;
+    color: $white-background;
+    border-radius: 5rem;
+    padding: 1.5rem 2rem;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(156, 6, 6);
+    }
+  }
+}
+
+.bookNow-number,
+.bookNow-email,
+.bookNow-skype,
+.bookNow-location {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $global-font-color;
+  gap: 1.5rem;
+}
+
+.others-rooms {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.others-rooms-titleAndButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  button {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $white-background;
+    background-color: $darkest-background;
+    border: 3px solid $global-font-color;
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    &:hover {
+      cursor: pointer;
+      background-color: #3b3b3b;
+    }
+  }
+}
+
+.other-rooms-display {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.otherRoom {
+  position: relative;
+  width: 30%;
+  aspect-ratio: 1/0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  overflow: hidden;
+  .difficulty,
+  .roomInfos {
+    z-index: 4;
+    color: $pAndI;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 4;
+    color: $white-background;
+    &:hover {
+      cursor: pointer;
+      color: $red;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+  }
+  .img-room {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .img-room {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.roomInfos {
+  display: flex;
+  padding-bottom: 2rem;
+  gap: 2rem;
+  .roomPlayers,
+  .roomTime,
+  .roomLocation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.otherRoom {
+  h3,
+  .roomInfos,
+  .difficulty {
+    padding-left: 2rem;
+  }
+}
+
+Footer {
+  @include background-img-cover-center(
+    "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/Room7-Dark.png?raw=true"
+  );
+  background-color: $Dark-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .FooterInfos {
+    margin-top: 5%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .Footercolumns {
+    width: 23%;
+
+    h1 {
+      font-size: 16px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      color: $White-background;
+      margin-bottom: 7.5%;
+    }
+
+    li {
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      color: $Global-font-color;
+    }
+  }
+
+  .Footercolumns:nth-child(1) {
+    li {
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "01";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(2) {
+    li {
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "02";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(3) {
+    li {
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .FooterWorkingHours {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .FooterWorkingHoursDays:nth-child(1) {
+        width: 45%;
+      }
+      .FooterWorkingHoursDays:nth-child(2) {
+        width: 45%;
+      }
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "03";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(4) {
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .FooterSocialMedia {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      background-color: $Global-font-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: large;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "04";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .FooterCopyright {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    border-top: 2px #434343 solid;
+
+    img {
+      margin-top: 2.5%;
+      margin-bottom: 2.5%;
+    }
+
+    p {
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      color: $Global-font-color;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  Footer {
+    .FooterInfos {
+      width: 90%;
+    }
+
+    .Footercolumns {
+      width: 23%;
+    }
+
+    .Footercolumns:nth-child(3) {
+      .FooterWorkingHoursDays:nth-child(1) {
+        line-height: 145%;
+      }
+
+      .FooterWorkingHoursDays:nth-child(2) {
+        width: 45%;
+        margin-left: 20%;
+      }
+    }
+
+    .Footercolumns:nth-child(4) {
+      .FooterSocialMedia {
+        width: 25px;
+        height: 25px;
+        font-size: medium;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  Footer {
+    .FooterInfos {
+      flex-direction: column;
+
+      .Footercolumns {
+        width: 75%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+
+        .Footerdash {
+          width: 100%;
+          left: 20px;
+          top: -10px;
+
+          &::after {
+            left: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header-txt {
+    h1 {
+      padding-left: 8rem;
+    }
+  }
+  .magic-imporium.roomPage,
+  .others-rooms {
+    width: 90% !important;
+  }
+  .otherRoom {
+    aspect-ratio: 1/1;
+    .roomInfos {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  @include tableAndDesktop;
+}
+
+@media (max-width: 556px) {
+  @include mobile;
+  .magic-imporium.roomPage {
+    flex-direction: column;
+  }
+  .roomPage-info,
+  .roomPage-BookNow {
+    width: 100% !important;
+  }
+  .other-rooms-display {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+  .otherRoom {
+    h3 {
+      font-size: 3rem;
+    }
+    gap: 3rem;
+    p {
+      font-size: 2rem;
+    }
+    i {
+      font-size: 1.5rem;
+    }
+    width: 100% !important;
+    .roomInfos {
+      gap: 2rem;
+      flex-direction: row;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+// magic border for the home page gallery photos
+@mixin magic-border($width, $color, $duration, $direction) {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + #{$width * 2});
+    height: calc(100% + #{$width * 2});
+    top: calc(#{$width}/ -1);
+    left: calc(#{$width}/ -1);
+    background: linear-gradient(to right, $color 0%, $color 100%),
+      linear-gradient(to top, $color 50%, transparent 50%),
+      linear-gradient(to top, $color 50%, transparent 50%),
+      linear-gradient(to right, $color 0%, $color 100%),
+      linear-gradient(to left, $color 0%, $color 100%);
+    background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
+    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    background-repeat: no-repeat, no-repeat;
+    transition: transform $duration ease-in-out,
+      background-position $duration ease-in-out,
+      background-size $duration ease-in-out;
+    transform: scaleX(0) rotate(180deg * $direction);
+    transition-delay: $duration * 2, $duration, 0s;
+  }
+  &:hover {
+    &:before {
+      background-size: 200% $width, $width 400%, $width 400%, 55% $width,
+        55% $width;
+      background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+      transform: scaleX(1) rotate(180deg * $direction);
+      transition-delay: 0s, $duration, $duration * 2;
+    }
+  }
+}
+
+@mixin fonts {
+  @font-face {
+    font-family: "hindi";
+    src: url("../../fonts/hind/regular.ttf") format("tft");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "montserrat";
+    src: url("../../fonts/montserrat/regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  * {
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "montserrat";
+    }
+    p {
+      font-family: "hindi";
+    }
+  }
+}
+@mixin mobile {
+  * {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 32px;
+    span {
+      font-size: 32px;
+    }
+  }
+  h2 {
+    font-size: 19px;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+@mixin tableAndDesktop {
+  * {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 120px;
+    span {
+      font-size: 120px;
+    }
+  }
+  h2 {
+    font-size: 44px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+@mixin headingColor {
+  h1,
+  h2,
+  h3 {
+    color: $white-background;
+    span {
+      color: $red;
+    }
+  }
+  p {
+    color: $global-font-color;
+  }
+}
+
+@mixin pages-header-text {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  span {
+    color: $global-font-color;
+  }
+  p {
+    color: $global-font-color;
+    &:hover {
+      color: $white-background;
+      cursor: pointer;
+    }
+  }
+}

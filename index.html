@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sass/layout/index/index.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rZy_0luH2vfZy7ol8nbgiL9VITEYcNU"></script>
+    <script src="/js/redirectPages.js" defer></script>
+    <script src="/js/app.js" defer></script>
+    <script src="/js/menuNav.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/8ad7569ef1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>HomePage</title>
+  </head>
+  <body>
+    <header>
+      <nav role="navigation" class="top_nav">
+        <div class="leftTopBar">
+          <img
+            src="/img/logo/logo.png"
+            id="logo_escapium"
+            alt="logo escapium"
+          />
+          <ul class="nav_links">
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">home</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">about</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">rooms</a>
+            </li>
+            <li class="containerLigneRed">
+              <a class="links_menu" href="#">bookings</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">blog</a>
+            </li>
+            <li class="containerLigneRed">
+              <a href="#" class="links_menu">contact</a>
+            </li>
+          </ul>
+        </div>
+        <button class="hamburguerButton">
+          <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+        </button>
+        <a href="#" class="btn_nav">Book Now!</a>
+      </nav>
+      <div class="header-content">
+        <div class="header-txt">
+          <h1>Escape in 60 mins?</h1>
+          <p class="viewRooms">VIEW OUR ROOMS</p>
+        </div>
+        <div class="header-buttons">
+          <button data-index="0" class="noEffect-button headerB"></button>
+          <button data-index="1" class="noEffect-button headerB"></button>
+          <button
+            data-index="2"
+            class="noEffect-button headerB active"
+          ></button>
+          <button data-index="3" class="noEffect-button headerB"></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="featuredRooms">
+        <button class="noEffect-button"></button>
+        <h2>Featured Rooms</h2>
+        <article class="featuredRoom">
+          <div class="roomDetails">
+            <div class="difficultyLogos">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #717171"></i>
+              <i class="fa-solid fa-lock" style="color: #717171"></i>
+            </div>
+            <h3>Magic Imporium</h3>
+            <div class="roomInfo">
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique commodi, perspiciatis delectus, nulla iure velit eius
+              facilis odit inventore, eaque doloremque. Ipsa culpa laudantium
+              explicabo aspernatur et minus quo dolorum.
+            </p>
+            <button>Read More</button>
+          </div>
+          <div class="room-img">
+            <img src="/img/gallery/slide-2.jpg" alt="" />
+          </div>
+        </article>
+        <article class="featuredRoom">
+          <div class="room-img">
+            <img src="/img/gallery/room-2.jpg" alt="" />
+          </div>
+          <div class="roomDetails snd">
+            <div class="difficultyLogos">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #717171"></i>
+            </div>
+            <h3>The Cure</h3>
+            <div class="roomInfo">
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>2-3</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique commodi, perspiciatis delectus, nulla iure velit eius
+              facilis odit inventore, eaque doloremque. Ipsa culpa laudantium
+              explicabo aspernatur et minus quo dolorum.
+            </p>
+            <button>Read More</button>
+          </div>
+        </article>
+        <article class="featuredRoom">
+          <div class="roomDetails">
+            <div class="difficultyLogos">
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #f60b0e"></i>
+              <i class="fa-solid fa-lock" style="color: #717171"></i>
+              <i class="fa-solid fa-lock" style="color: #717171"></i>
+              <i class="fa-solid fa-lock" style="color: #717171"></i>
+            </div>
+            <h3>Burlesque</h3>
+            <div class="roomInfo">
+              <div class="number-players">
+                <i class="fa-solid fa-user"></i>
+                <p>3-5</p>
+              </div>
+              <div class="time-roomScape">
+                <i class="fa-regular fa-clock"></i>
+                <p>60</p>
+              </div>
+              <div class="roomLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>NEW YORK 3031</p>
+              </div>
+            </div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia
+              beatae enim, rerum vitae ullam optio minima aperiam excepturi
+              debitis, fugit voluptates est? Porro molestias ut culpa sapiente,
+              pariatur numquam! Maiores?lore
+            </p>
+            <button>Read More</button>
+          </div>
+          <div class="room-img">
+            <img src="/img/gallery/room-3.jpg" alt="Room image" />
+          </div>
+        </article>
+        <button class="viewRooms">View All Rooms</button>
+      </section>
+      <section class="how-it-works">
+        <button class="noEffect-button"></button>
+        <h2>How it works</h2>
+        <article class="how-it-works-info">
+          <div class="info-container">
+            <i class="fa-solid fa-lock"></i>
+            <h3>You Are Locked In</h3>
+            <p>
+              You will bring nothing in, but the escape room will be filled with
+              useful and sometimes irrelevant objects.
+            </p>
+          </div>
+          <div class="info-container">
+            <i class="fa-regular fa-clock"></i>
+            <h3>The Clock Is Ticking...</h3>
+            <p>
+              Can you puzzle your way to the intriguing conclusion and escape
+              the room in 60 minutes?
+            </p>
+          </div>
+          <div class="info-container">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h3>Feel The Atmosphere</h3>
+            <p>
+              The rooms are built to create an authentic experience with a fun
+              atmosphere, stict attention to detail.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="testimonials">
+        <button class="noEffect-button"></button>
+        <h2>Testimonials</h2>
+        <article class="testimonials-container">
+          <div class="testimonials-left">
+            <p>
+              "My family and I had a spectacular experience here and they are
+              above and beyond in customer service and entertainment."
+            </p>
+            <img src="/img/avatars/comment-avatar-1.png" alt="person avatar" />
+            <p>AARON</p>
+          </div>
+          <div class="testimonials-right">
+            <p>
+              "This place is a blast, especially for groups! I loved seeing how
+              group members of different personalities approached the puzzles."
+            </p>
+            <img src="/img/avatars/person-2.png" alt="person avatar" />
+            <p>TIFFANY</p>
+          </div>
+        </article>
+        <div class="buttons-testimonials">
+          <button><i class="fa-sharp fa-solid fa-arrow-left-long"></i></button>
+          <div class="line"></div>
+          <button><i class="fa-sharp fa-solid fa-arrow-right-long"></i></button>
+        </div>
+      </section>
+      <section class="latest-blog-posts">
+        <button class="noEffect-button"></button>
+        <h2>Latest Blog Posts</h2>
+        <a href="#">Browse All Blog Posts</a>
+        <section class="posts">
+          <article class="blog-post">
+            <div class="img-user-container">
+              <img
+                class="blog-img"
+                src="/img/gallery/room-9.jpg"
+                alt="clock image"
+              />
+              <div class="userAvaName">
+                <img src="/img/avatars/person-1.png" alt="user photo" />
+                <p>Andy Bernard</p>
+              </div>
+            </div>
+            <p class="topic-post">Rooms</p>
+            <button class="noEffect-button"></button>
+            <h3>Kidnapped Game Now Open</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              officiis voluptate officia sed totam dolorum nisi, dolorem debitis
+              perferendis iste maiores eius earum sunt. Velit nostrum illum
+              magnam molestiae laboriosam?
+            </p>
+          </article>
+          <article class="blog-post">
+            <div class="img-user-container">
+              <img
+                class="blog-img"
+                src="/img/gallery/post-img-2.jpg"
+                alt="Room image"
+              />
+              <div class="userAvaName">
+                <img src="/img/avatars/person-1.png" alt="user photo" />
+                <p>Andy Bernard</p>
+              </div>
+            </div>
+            <p class="topic-post">Basics</p>
+            <button class="noEffect-button"></button>
+            <h3>What is an Escape Room?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              officiis voluptate officia sed totam dolorum nisi, dolorem debitis
+              perferendis iste maiores eius earum sunt. Velit nostrum illum
+              magnam molestiae laboriosam?
+            </p>
+          </article>
+          <article class="blog-post">
+            <div class="img-user-container">
+              <img
+                class="blog-img"
+                src="/img/gallery/room-7.jpg"
+                alt="Room image"
+              />
+              <div class="userAvaName">
+                <img src="/img/avatars/person-1.png" alt="user photo" />
+                <p>Andy Bernard</p>
+              </div>
+            </div>
+            <p class="topic-post">Basics</p>
+            <button class="noEffect-button"></button>
+            <h3>
+              Team <br />
+              Building
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              officiis voluptate officia sed totam dolorum nisi, dolorem debitis
+              perferendis iste maiores eius earum sunt. Velit nostrum illum
+              magnam molestiae laboriosam?
+            </p>
+          </article>
+        </section>
+      </section>
+      <section class="who-can-play">
+        <div class="overlay"></div>
+        <div class="who-can-play-container">
+          <div class="wcp-container-left">
+            <p>WHO CAN PLAY</p>
+          </div>
+          <div class="wcp-container-right">
+            <div class="friends">
+              <i class="fa-solid fa-user-group" style="color: #ff0000"></i>
+              <p>FRIENDS & FAMILY</p>
+            </div>
+            <div class="team">
+              <i
+                class="fa-sharp fa-solid fa-suitcase"
+                style="color: #ff0000"
+              ></i>
+              <p>TEAM & CO-WORKERS</p>
+            </div>
+            <div class="game">
+              <i class="fa-solid fa-gamepad" style="color: #ff0000"></i>
+              <p>GAME LOVERS</p>
+            </div>
+            <div class="tourists">
+              <i class="fa-solid fa-plane-up" style="color: #fa0000"></i>
+              <p>TOURISTS</p>
+            </div>
+          </div>
+        </div>
+        <div class="wcp-img-container"></div>
+      </section>
+      <section class="photos-gallery-container">
+        <button class="noEffect-button"></button>
+        <h2>Photo Shots</h2>
+        <a href="#">#espacium</a>
+        <article class="photos-gallery">
+          <div class="img-container">
+            <div class="img-container-social">
+              <i class="fa-solid fa-heart" style="color: #ffffff"> 99</i>
+              <i class="fa-solid fa-comment" style="color: #ffffff"> 99</i>
+            </div>
+            <img src="img/gallery/gallery-7.jpg" alt="" />
+            <div class="hover-outline"></div>
+          </div>
+          <div class="img-container">
+            <div class="img-container-social">
+              <i class="fa-solid fa-heart" style="color: #ffffff"> 99</i>
+              <i class="fa-solid fa-comment" style="color: #ffffff"> 99</i>
+            </div>
+            <img src="img/gallery/gallery-3.jpg" alt="" />
+            <div class="hover-outline"></div>
+          </div>
+          <div class="img-container">
+            <div class="img-container-social">
+              <i class="fa-solid fa-heart" style="color: #ffffff"> 99</i>
+              <i class="fa-solid fa-comment" style="color: #ffffff"> 99</i>
+            </div>
+            <img src="img/gallery/gallery-2.jpg" alt="" />
+            <div class="hover-outline"></div>
+          </div>
+          <div class="img-container">
+            <div class="img-container-social">
+              <i class="fa-solid fa-heart" style="color: #ffffff"> 99</i>
+              <i class="fa-solid fa-comment" style="color: #ffffff"> 99</i>
+            </div>
+            <img src="img/gallery/gallery-8.jpg" alt="" />
+            <div class="hover-outline"></div>
+          </div>
+          <div class="img-container">
+            <div class="img-container-social">
+              <i class="fa-solid fa-heart" style="color: #ffffff"> 99</i>
+              <i class="fa-solid fa-comment" style="color: #ffffff"> 99</i>
+            </div>
+            <img src="img/gallery/gallery-4.jpg" alt="" />
+            <div class="hover-outline"></div>
+          </div>
+          <div class="img-container">
+            <div class="img-container-social">
+              <i class="fa-solid fa-heart" style="color: #ffffff"> 99</i>
+              <i class="fa-solid fa-comment" style="color: #ffffff"> 99</i>
+            </div>
+            <img src="img/gallery/gallery-6.jpg" alt="" />
+            <div class="hover-outline"></div>
+          </div>
+          <div class="img-container">
+            <div class="img-container-social">
+              <i class="fa-solid fa-heart" style="color: #ffffff"> 99</i>
+              <i class="fa-solid fa-comment" style="color: #ffffff"> 99</i>
+            </div>
+            <img src="img/gallery/gallery-1.jpg" alt="" />
+            <div class="hover-outline"></div>
+          </div>
+          <div class="img-container">
+            <div class="img-container-social">
+              <i class="fa-solid fa-heart" style="color: #ffffff"> 99</i>
+              <i class="fa-solid fa-comment" style="color: #ffffff"> 99</i>
+            </div>
+            <img src="img/gallery/gallery-5.jpg" alt="" />
+            <div class="hover-outline"></div>
+          </div>
+        </article>
+        <button class="followFeed">Follow Our Feed</button>
+      </section>
+      <section class="get-in-touch">
+        <div id="map"></div>
+        <article class="form">
+          <button class="noEffect-button"></button>
+          <h2>Get In Touch</h2>
+          <form action="" id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Name" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+            />
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Your message ..."
+            ></textarea>
+            <button id="submitButton">Send Message</button>
+          </form>
+        </article>
+      </section>
+      <section class="bookRoom">
+        <button class="noEffect-button"></button>
+        <div class="bookRoom-txt">
+          <h2>Ready For The Escape?</h2>
+          <p>Escape Room gives you the opportunity to have fun</p>
+        </div>
+        <button class="bookRoomButton">Book your Escape</button>
+      </section>
+    </main>
+    <footer>
+      <div class="FooterInfos">
+        <div class="Footercolumns">
+          <i class="fa-solid fa-minus Footerdash" style="color: #f60b0e"></i>
+          <h1>Our Address</h1>
+          <ul>
+            <li>Escape Room Ltd.</li>
+            <li>2390 RoadHill St., Suite 100</li>
+            <li>North Downtown, NY 82153</li>
+            <li style="color: transparent">"</li>
+            <li>
+              Email: <span style="color: #fefefe">info@escapium.com</span>
+            </li>
+            <li>Tel: +1 800 900 1248</li>
+          </ul>
+        </div>
+
+        <div class="Footercolumns">
+          <i class="fa-solid fa-minus Footerdash" style="color: #f60b0e"></i>
+          <h1>Useful Links</h1>
+          <ul>
+            <li>ABOUT</li>
+            <li>GALLERY</li>
+            <li>PLAN AN EVENT</li>
+            <li>PRICING PACKAGES</li>
+            <li>FAQ</li>
+            <li>CONTACT</li>
+          </ul>
+        </div>
+
+        <div class="Footercolumns">
+          <i class="fa-solid fa-minus Footerdash" style="color: #f60b0e"></i>
+          <h1>Working Hours</h1>
+
+          <div class="FooterWorkingHours">
+            <div class="FooterWorkingHoursDays">
+              <ul>
+                <li>Monday:</li>
+                <li>Tuesday:</li>
+                <li>Wednesday:</li>
+                <li>Thursday:</li>
+                <li>Friday:</li>
+                <li>Saturday:</li>
+                <li>Sunaday:</li>
+              </ul>
+            </div>
+
+            <div class="FooterWorkingHoursDays">
+              <ul>
+                <li>6pm - 11pm</li>
+                <li>5pm - 11pm</li>
+                <li>Closed</li>
+                <li>6pm - 11pm</li>
+                <li>2pm - 11pm</li>
+                <li>11pm - 11pm</li>
+                <li>11pm - 9pm</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="Footercolumns">
+          <i class="fa-solid fa-minus Footerdash" style="color: #f60b0e"></i>
+          <h1>Social Links</h1>
+          <ul>
+            <li>
+              <div class="FooterSocialMedia">
+                <a href="#"
+                  ><i class="fa-brands fa-facebook-f" style="color: #fefefe"></i
+                ></a>
+              </div>
+            </li>
+            <li>
+              <div class="FooterSocialMedia">
+                <a href="#"
+                  ><i class="fa-brands fa-twitter" style="color: #fefefe"></i
+                ></a>
+              </div>
+            </li>
+            <li>
+              <div class="FooterSocialMedia">
+                <a href="#"
+                  ><i class="fa-brands fa-instagram" style="color: #fefefe"></i
+                ></a>
+              </div>
+            </li>
+            <li>
+              <div class="FooterSocialMedia">
+                <a href="#"
+                  ><i class="fa-brands fa-linkedin" style="color: #fefefe"></i
+                ></a>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <div class="FooterSocialMedia">
+                <a href="#"></a
+                ><i class="fa-brands fa-snapchat" style="color: #fefefe"></i>
+              </div>
+            </li>
+            <li>
+              <div class="FooterSocialMedia">
+                <a href="#"
+                  ><i class="fa-brands fa-google" style="color: #fefefe"></i
+                ></a>
+              </div>
+            </li>
+            <li>
+              <div class="FooterSocialMedia">
+                <a href="#"
+                  ><i class="fa-brands fa-youtube" style="color: #fefefe"></i
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="FooterCopyright">
+        <img
+          src="https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/logo/footer-logo.png?raw=true"
+          alt="Logo"
+        />
+        <p>Copyright © 2020 Escapium | All Rights Reserved</p>
+      </div>
+    </footer>
+    <script>
+      const viewAllRooms = document.querySelectorAll(".viewRooms");
+      // BE REDIRECTED TO ALL ROOMS PAGE
+      viewAllRooms.forEach((button) => {
+        button.addEventListener("click", () => {
+          window.location.href = "/html/rooms.html";
+        });
+      });
+    </script>
+    <script>
+      function initMap() {
+        // Create a map object and specify the initial coordinates
+        let map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 37.7749, lng: -122.4194 },
+          zoom: 12,
+        });
+      }
+    </script>
+    <script async defer>
+      // Load the map when the page finishes loading
+      window.addEventListener("load", function () {
+        initMap();
+      });
+    </script>
+  </body>
+</html>
