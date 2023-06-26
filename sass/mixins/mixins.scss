@@ -33,6 +33,31 @@
   }
 }
 
+@mixin fonts {
+  @font-face {
+    font-family: "hindi";
+    src: url("../../fonts/hind/regular.ttf") format("tft");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "montserrat";
+    src: url("../../fonts/montserrat/regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  * {
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "montserrat";
+    }
+    p {
+      font-family: "hindi";
+    }
+  }
+}
 @mixin mobile {
   * {
     font-size: 10px;

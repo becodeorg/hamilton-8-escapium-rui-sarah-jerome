@@ -1,0 +1,1440 @@
+@import "../../variables/colors&fonts";
+@import "../../mixins/minireset";
+@import "../../mixins/mixing";
+@import "../../variables/variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @include headingColor;
+  @include fonts;
+}
+
+.top_nav {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  padding-right: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.leftTopBar {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.col {
+  flex-direction: column;
+  width: 100%;
+  padding-left: 2rem;
+  align-items: center;
+}
+
+.hamburguerButton {
+  position: absolute;
+  right: 5%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  i {
+    font-size: 3rem;
+  }
+}
+.click {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: black;
+
+  * {
+    z-index: 1001;
+  }
+}
+
+.display {
+  display: block;
+}
+
+.noDisplayNav {
+  display: none;
+}
+
+.noDisplayB {
+  display: none;
+}
+
+.nav_links {
+  height: 5rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  li {
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $global-font-color;
+      font-weight: 700;
+      position: relative;
+      &:hover {
+        color: $white-background;
+        &::after {
+          min-width: 100%;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 40%;
+        height: 0.3rem;
+        width: 0;
+        background-color: red;
+        transform: rotate(135deg);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.containerLigneRed {
+  position: relative;
+  display: inline-block;
+}
+
+.btn_nav {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 13px 34px;
+  border: solid 2.5px #cbcbcb;
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+.header-txt {
+  padding-left: 10rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  p {
+    &:hover {
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 3rem;
+  align-items: flex-end;
+  justify-content: center;
+  .noEffect-button.headerB {
+    &:hover {
+      cursor: pointer;
+      background-color: $white-background;
+    }
+  }
+  .active {
+    width: 50px;
+    background-color: $white-background;
+  }
+}
+
+.BlogsPageSection1 {
+  background-image: url("https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/slide-1.jpg?raw=true");
+  background-size: cover;
+  background-position: center 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+
+  h2 {
+    font-size: 44px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: $White-background;
+    margin-bottom: 10px;
+  }
+
+  ol {
+    display: flex;
+    flex-direction: row;
+  }
+
+  li {
+    display: inline;
+    font-size: 16px;
+    font-family: "Hind";
+    color: $Global-font-color;
+
+    i {
+      margin-right: 10px;
+      font-size: medium;
+    }
+
+    .CardTextContentinfos {
+      margin-right: 20px;
+      color: $Global-font-color;
+      font-family: "Montserrat";
+      font-size: 11px;
+      font-weight: 700;
+    }
+  }
+}
+
+.BlogsPageSection2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $Darkest-background;
+
+  .BlogsPageSection2All {
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+  }
+
+  .BlogsPageSection2Articles {
+    width: 67.5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .BlogsPageSection2ArticlesDoubleCards {
+      .BlogsPageSection2ArticlesCardImg {
+        position: relative;
+        margin-top: 10%;
+        width: 85%;
+        height: 400px;
+        overflow: hidden;
+        z-index: 1;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+
+      .BlogsPageSection2ArticlesCardText {
+        position: relative;
+        width: 85%;
+        height: auto;
+        background-color: $Dark-background;
+        margin-left: 7.5%;
+        margin-top: -10%;
+        z-index: 2;
+        box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.5);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .BlogsPageSection2ArticlesCardTextContent {
+          width: 85%;
+          height: 80%;
+          padding-top: 5%;
+          padding-bottom: 5%;
+
+          figure {
+            margin-bottom: 7.5%;
+          }
+
+          h1 {
+            font-size: 32px;
+            font-family: "Montserrat";
+            font-weight: 600;
+            color: $White-background;
+            text-align: start;
+            margin-bottom: 7.5%;
+          }
+
+          p {
+            margin-right: 20px;
+            color: $Global-font-color;
+            font-family: "Montserrat";
+            font-size: 13px;
+            width: 100%;
+            text-align: justify;
+            margin-bottom: 7.5%;
+          }
+
+          ol {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+
+          Button {
+            margin-right: 10px;
+            margin-bottom: 0;
+            margin-bottom: 10px;
+            height: 25px;
+            width: 80px;
+            border-radius: 25px;
+            background-color: $Darkest-background;
+            border: 1px solid $Global-font-color;
+            color: $White-background;
+            font-size: 11px;
+            font-family: "Montserrat";
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .BlogsPageSection2ArticlesFirstCommentBackground {
+      width: 85%;
+      margin-left: 7.5%;
+      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .FirstCommentProfilPicture {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        img {
+          width: 70px;
+          border-radius: 50px;
+          height: auto;
+          margin-top: 7%;
+          margin-left: -5%;
+        }
+      }
+
+      .BlogsPageSection2ArticlesFirstCommentText {
+        border: 1px #4d4c4c solid;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10% 0 10% 0;
+        position: relative;
+
+        .BlogsPageSection2ArticlesCommentsProfil {
+          display: none;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 2.5%;
+
+          img {
+            width: 70px;
+            height: auto;
+            border-radius: 50px;
+            margin-right: 2.5%;
+          }
+
+          .BlogsPageSection2ArticlesCommentsProfilName {
+            h3 {
+              font-size: 16px;
+              font-family: "Montserrat";
+              font-weight: 500;
+              color: $White-background;
+              text-align: start;
+            }
+
+            h4 {
+              font-size: 11px;
+              font-family: "Montserrat";
+              font-weight: 500;
+              color: $Global-font-color;
+              text-align: start;
+            }
+          }
+        }
+
+        .FirstCommentNameIcones {
+          width: 80%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 5%;
+
+          h2 {
+            font-size: 16px;
+            font-family: "Montserrat";
+            font-weight: 500;
+            color: $White-background;
+            text-align: start;
+            margin-bottom: 5px;
+          }
+
+          h6 {
+            font-size: 11px;
+            font-family: "Montserrat";
+            font-weight: 500;
+            color: $Global-font-color;
+            text-align: start;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: row;
+          }
+
+          .FirstCommentIcone {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+            background-color: $Global-font-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+          }
+        }
+
+        p {
+          width: 80%;
+          color: $Global-font-color;
+          font-family: "Montserrat";
+          font-size: 13px;
+          text-align: justify;
+        }
+      }
+    }
+
+    .BlogsPageSection2ArticlesComments {
+      width: 85%;
+      margin-left: 7.5%;
+
+      h1 {
+        font-size: 28px;
+        font-family: "Montserrat";
+        font-weight: 500;
+        color: $White-background;
+        text-align: start;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        position: relative;
+
+        &::after {
+          content: "";
+          font-size: 16px;
+          font-family: "Hind";
+          position: absolute;
+          font-weight: 500;
+          top: 60px;
+          left: 0%;
+          transform: translate(-50%, -50%);
+          width: 7.5%;
+          height: 3px;
+          background-color: $Global-font-color;
+          opacity: 0.5;
+        }
+      }
+
+      .BlogsPageSection2ArticlesComment {
+        margin-bottom: 7.5%;
+
+        .BlogsPageSection2ArticlesCommentsProfil {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 2.5%;
+
+          img {
+            width: 70px;
+            height: auto;
+            border-radius: 50px;
+            margin-right: 2.5%;
+          }
+
+          .BlogsPageSection2ArticlesCommentsProfilName {
+            h3 {
+              font-size: 16px;
+              font-family: "Montserrat";
+              font-weight: 500;
+              color: $White-background;
+              text-align: start;
+            }
+
+            h4 {
+              font-size: 11px;
+              font-family: "Montserrat";
+              font-weight: 500;
+              color: $Global-font-color;
+              text-align: start;
+            }
+          }
+        }
+
+        p {
+          font-size: 11px;
+          font-family: "Montserrat";
+          font-weight: 500;
+          color: $Global-font-color;
+          text-align: start;
+        }
+
+        h6 {
+          font-size: 9px;
+          font-family: "Hind";
+          font-weight: 500;
+          color: $Global-font-color;
+          letter-spacing: 3px;
+          text-align: start;
+          margin-top: 2.5%;
+        }
+      }
+
+      .BlogsPageSection2ArticlesComment:nth-child(4) {
+        margin-left: 10%;
+      }
+
+      .BlogsPageSection2ArticlesComment:nth-child(5) {
+        margin-left: 10%;
+        border-left: 3px red solid;
+
+        .BlogsPageSection2ArticlesCommentsProfil {
+          margin-left: 7.5%;
+        }
+
+        p {
+          margin-left: 7.5%;
+        }
+
+        h6 {
+          margin-left: 7.5%;
+        }
+      }
+
+      .BlogsPageSection2ArticlesComment:nth-child(6) {
+        margin-bottom: 0%;
+      }
+    }
+  }
+}
+
+.BlogsPageSecion2Infos {
+  width: 27.5%;
+
+  .BlogsPageSecion2InfosCat {
+    margin-top: 25%;
+
+    h1 {
+      font-size: 32px;
+      font-family: "Montserrat";
+      font-weight: 500;
+      color: $White-background;
+      text-align: start;
+      margin-bottom: 15%;
+      position: relative;
+
+      &::after {
+        content: "";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 150%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        width: 10%;
+        height: 3px;
+        background-color: $Global-font-color;
+        opacity: 0.5;
+      }
+    }
+
+    li {
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $Global-font-color;
+    }
+  }
+
+  .BlogsPageSecion2InfosPop {
+    margin-top: 15%;
+
+    h1 {
+      font-size: 32px;
+      font-family: "Montserrat";
+      font-weight: 500;
+      color: $White-background;
+      text-align: center;
+      text-align: start;
+      margin-bottom: 15%;
+      position: relative;
+
+      &::after {
+        content: "";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 150%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        width: 10%;
+        height: 3px;
+        background-color: $Global-font-color;
+        opacity: 0.5;
+      }
+    }
+
+    .BlogsPageSecion2InfosPopContainer {
+      width: 90%;
+
+      .BlogsPageSecion2InfosPopCards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5%;
+
+        p {
+          width: 30%;
+          font-size: 11px;
+          color: $Global-font-color;
+          position: relative;
+
+          &::after {
+            content: "";
+            font-size: 16px;
+            font-family: "Hind";
+            position: absolute;
+            font-weight: 500;
+            top: 50%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            width: 25%;
+            height: 1px;
+            background-color: $Global-font-color;
+            opacity: 0.5;
+          }
+        }
+
+        h2 {
+          width: 60%;
+          font-size: 16px;
+          font-family: "Montserrat";
+          font-weight: 500;
+          color: $White-background;
+        }
+      }
+    }
+  }
+
+  .BlogsPageSecion2InfosTags {
+    margin-top: 15%;
+
+    h1 {
+      font-size: 32px;
+      font-family: "Montserrat";
+      font-weight: 500;
+      color: $White-background;
+      text-align: center;
+      text-align: start;
+      margin-bottom: 15%;
+      position: relative;
+
+      &::after {
+        content: "";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 150%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        width: 10%;
+        height: 3px;
+        background-color: $Global-font-color;
+        opacity: 0.5;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+
+    button {
+      margin-right: 20px;
+      margin-bottom: 0;
+      margin-bottom: 10px;
+      height: 33px;
+      width: 90%;
+      border-radius: 25px;
+      background-color: $Darkest-background;
+      border: 2px solid $Global-font-color;
+      color: $White-background;
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 700;
+    }
+  }
+
+  .BlogsPageSecion2InfosPhoto {
+    margin-top: 15%;
+
+    h1 {
+      font-size: 32px;
+      font-family: "Montserrat";
+      font-weight: 500;
+      color: $White-background;
+      text-align: center;
+      text-align: start;
+      margin-bottom: 15%;
+      position: relative;
+
+      &::after {
+        content: "";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 150%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        width: 10%;
+        height: 3px;
+        background-color: $Global-font-color;
+        opacity: 0.5;
+      }
+    }
+
+    .BlogsPageSecion2InfosPhotoImg {
+      height: 115px;
+      width: 115px;
+
+      &:nth-child(1) {
+        @include background-img-cover-center(
+          "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/gallery-7.jpg?raw=true"
+        );
+      }
+
+      &:nth-child(2) {
+        @include background-img-cover-center(
+          "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/gallery-6.jpg?raw=true"
+        );
+      }
+
+      &:nth-child(3) {
+        @include background-img-cover-center(
+          "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/gallery-2.jpg?raw=true"
+        );
+      }
+
+      &:nth-child(4) {
+        @include background-img-cover-center(
+          "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/gallery-4.jpg?raw=true"
+        );
+      }
+
+      &:nth-child(5) {
+        @include background-img-cover-center(
+          "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/gallery-5.jpg?raw=true"
+        );
+      }
+
+      &:nth-child(6) {
+        @include background-img-cover-center(
+          "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/gallery-3.jpg?raw=true"
+        );
+      }
+    }
+
+    .BlogsPageSecion2InfosPhotoGrid {
+      width: 80%;
+      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  .BlogsPageSecion2InfosArchive {
+    margin-top: 15%;
+
+    h1 {
+      font-size: 32px;
+      font-family: "Montserrat";
+      font-weight: 500;
+      color: $White-background;
+      text-align: center;
+      text-align: start;
+      margin-bottom: 15%;
+      position: relative;
+
+      &::after {
+        content: "";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 150%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        width: 10%;
+        height: 3px;
+        background-color: $Global-font-color;
+        opacity: 0.5;
+      }
+    }
+
+    li {
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: $Global-font-color;
+    }
+  }
+}
+
+Footer {
+  @include background-img-cover-center(
+    "https://github.com/becodeorg/hamilton-8-escapium-rui-sarah-jerome/blob/main/img/gallery/Room7-Dark.png?raw=true"
+  );
+  background-color: $Dark-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .FooterInfos {
+    margin-top: 5%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .Footercolumns {
+    width: 23%;
+
+    h1 {
+      font-size: 16px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      color: $White-background;
+      margin-bottom: 7.5%;
+    }
+
+    li {
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      color: $Global-font-color;
+    }
+  }
+
+  .Footercolumns:nth-child(1) {
+    li {
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "01";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(2) {
+    li {
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "02";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(3) {
+    li {
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .FooterWorkingHours {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .FooterWorkingHoursDays:nth-child(1) {
+        width: 45%;
+      }
+      .FooterWorkingHoursDays:nth-child(2) {
+        width: 45%;
+      }
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "03";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .Footercolumns:nth-child(4) {
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .FooterSocialMedia {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      background-color: $Global-font-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: large;
+    }
+
+    .Footerdash {
+      font-size: x-large;
+      opacity: 0.5;
+      position: relative;
+
+      &::after {
+        content: "04";
+        font-size: 16px;
+        font-family: "Hind";
+        position: absolute;
+        font-weight: 500;
+        top: 50%;
+        left: -20px;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        color: $Global-font-color;
+      }
+    }
+  }
+
+  .FooterCopyright {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    border-top: 2px #434343 solid;
+
+    img {
+      margin-top: 2.5%;
+      margin-bottom: 2.5%;
+    }
+
+    p {
+      font-size: 11px;
+      font-family: "Montserrat";
+      font-weight: 600;
+      color: $Global-font-color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .BlogsPageSection2 {
+    .BlogsPageSection2All {
+      .BlogsPageSection2Articles {
+        width: 70%;
+
+        .BlogsPageSection2ArticlesDoubleCards {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .BlogsPageSection2ArticlesCardImg {
+            height: 275px;
+          }
+
+          .BlogsPageSection2ArticlesCardText {
+            margin-left: 0;
+            margin-top: 0;
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+            margin-right: 0;
+
+            .BlogsPageSection2ArticlesCardTextContent {
+              ol {
+                flex-direction: column;
+              }
+            }
+          }
+        }
+
+        .BlogsPageSection2ArticlesFirstCommentBackground {
+          .BlogsPageSection2ArticlesFirstCommentText {
+            align-items: flex-start;
+            padding-left: 5%;
+
+            p {
+              width: 95%;
+            }
+
+            .FirstCommentNameIcones {
+              display: none;
+            }
+
+            .BlogsPageSection2ArticlesCommentsProfil {
+              display: flex;
+              width: 100%;
+
+              img {
+                margin-right: 5%;
+              }
+
+              ul {
+                width: 40%;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                margin-right: 5%;
+              }
+            }
+          }
+
+          .FirstCommentProfilPicture {
+            display: none;
+          }
+        }
+      }
+
+      .BlogsPageSecion2Infos {
+        width: 30%;
+
+        .BlogsPageSecion2InfosCat {
+          h1 {
+            font-size: 22px;
+          }
+
+          li {
+            font-weight: 600;
+          }
+        }
+
+        .BlogsPageSecion2InfosPop {
+          h1 {
+            font-size: 22px;
+          }
+
+          .BlogsPageSecion2InfosPopContainer {
+            width: auto;
+            .BlogsPageSecion2InfosPopCards {
+              p {
+                width: 40%;
+
+                &::after {
+                  content: "";
+
+                  left: 125%;
+                  width: 20%;
+                }
+              }
+
+              h2 {
+                width: 60%;
+                font-size: 11px;
+                margin-left: 20%;
+              }
+            }
+          }
+        }
+
+        .BlogsPageSecion2InfosTags {
+          h1 {
+            font-size: 22px;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+          }
+
+          button {
+            width: 60%;
+          }
+        }
+
+        .BlogsPageSecion2InfosPhoto {
+          h1 {
+            font-size: 22px;
+          }
+
+          .BlogsPageSecion2InfosPhotoImg {
+            height: 100px;
+            width: 100px;
+          }
+
+          .BlogsPageSecion2InfosPhotoGrid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+          }
+        }
+
+        .BlogsPageSecion2InfosArchive {
+          h1 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  Footer {
+    .FooterInfos {
+      width: 90%;
+    }
+
+    .Footercolumns {
+      width: 23%;
+    }
+
+    .Footercolumns:nth-child(3) {
+      .FooterWorkingHoursDays:nth-child(1) {
+        line-height: 145%;
+      }
+
+      .FooterWorkingHoursDays:nth-child(2) {
+        width: 45%;
+        margin-left: 20%;
+      }
+    }
+
+    .Footercolumns:nth-child(4) {
+      .FooterSocialMedia {
+        width: 25px;
+        height: 25px;
+        font-size: medium;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .BlogsPageSection1 {
+    h2 {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    ol {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    li {
+      display: inline-block;
+      font-size: 11px;
+      font-family: "Hind";
+      color: $Global-font-color;
+
+      i {
+        margin-right: 6px;
+        font-size: medium;
+      }
+
+      .CardTextContentinfos {
+        margin-right: 20px;
+        color: $Global-font-color;
+        font-family: "Montserrat";
+        font-size: 11px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .BlogsPageSection2 {
+    .BlogsPageSection2All {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .BlogsPageSection2Articles {
+        width: 100%;
+
+        .BlogsPageSection2ArticlesDoubleCards {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .BlogsPageSection2ArticlesCardImg {
+            height: 275px;
+          }
+
+          .BlogsPageSection2ArticlesCardText {
+            margin-left: 0;
+            margin-top: 0;
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+            margin-right: 0;
+
+            .BlogsPageSection2ArticlesCardTextContent {
+              ol {
+                flex-direction: column;
+              }
+            }
+          }
+        }
+
+        .BlogsPageSection2ArticlesFirstCommentBackground {
+          .BlogsPageSection2ArticlesFirstCommentText {
+            align-items: flex-start;
+            padding-left: 5%;
+
+            p {
+              width: 95%;
+            }
+
+            .FirstCommentNameIcones {
+              display: none;
+            }
+
+            .BlogsPageSection2ArticlesCommentsProfil {
+              display: flex;
+              width: 100%;
+
+              img {
+                margin-right: 5%;
+              }
+
+              ul {
+                width: 40%;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                margin-right: 5%;
+              }
+            }
+          }
+
+          .FirstCommentProfilPicture {
+            display: none;
+          }
+        }
+
+        .BlogsPageSection2ArticlesComments {
+          h1::after {
+            top: 50px;
+          }
+        }
+      }
+
+      .BlogsPageSecion2Infos {
+        width: 80%;
+
+        .BlogsPageSecion2InfosPop {
+          margin-top: 15%;
+
+          h1 {
+            font-size: 32px;
+            font-family: "Montserrat";
+            font-weight: 500;
+            color: $White-background;
+            text-align: center;
+            text-align: start;
+            margin-bottom: 15%;
+            position: relative;
+
+            &::after {
+              content: "";
+              font-size: 16px;
+              font-family: "Hind";
+              position: absolute;
+              font-weight: 500;
+              top: 150%;
+              left: 0%;
+              transform: translate(-50%, -50%);
+              width: 10%;
+              height: 3px;
+              background-color: $Global-font-color;
+              opacity: 0.5;
+            }
+          }
+
+          .BlogsPageSecion2InfosPopContainer {
+            width: 90%;
+
+            .BlogsPageSecion2InfosPopCards {
+              p {
+                width: 30%;
+                font-size: 11px;
+                color: $Global-font-color;
+                position: relative;
+
+                &::after {
+                  content: "";
+                  font-size: 16px;
+                  font-family: "Hind";
+                  position: absolute;
+                  font-weight: 500;
+                  top: 50%;
+                  left: 85%;
+                  transform: translate(-50%, -50%);
+                  width: 25%;
+                  height: 1px;
+                  background-color: $Global-font-color;
+                  opacity: 0.5;
+                }
+              }
+
+              h2 {
+                width: 60%;
+                font-size: 16px;
+                font-family: "Montserrat";
+                font-weight: 500;
+                color: $White-background;
+              }
+            }
+          }
+        }
+
+        .BlogsPageSecion2InfosTags {
+          ul {
+            display: flex;
+            flex-direction: row;
+          }
+
+          button {
+            width: 90%;
+          }
+        }
+
+        .BlogsPageSecion2InfosPhoto {
+          .BlogsPageSecion2InfosPhotoImg {
+            height: 100px;
+            width: 100px;
+          }
+          .BlogsPageSecion2InfosPhotoGrid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
+
+  Footer {
+    .FooterInfos {
+      flex-direction: column;
+
+      .Footercolumns {
+        width: 75%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+
+        .Footerdash {
+          width: 100%;
+          left: 20px;
+          top: -10px;
+
+          &::after {
+            left: 30px;
+          }
+        }
+      }
+    }
+  }
+}

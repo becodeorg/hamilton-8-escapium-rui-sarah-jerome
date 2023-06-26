@@ -1,0 +1,12 @@
+@mixin background-img-cover-center($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin placeholder($align, $justify, $flex) {
+  display: flex;
+  align-items: ($align);
+  justify-content: ($justify);
+  flex-direction: ($flex);
+}

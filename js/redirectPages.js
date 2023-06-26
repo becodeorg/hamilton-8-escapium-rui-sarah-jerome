@@ -8,7 +8,7 @@ navBarLi.forEach((a) => {
         window.location.href = "/index.html";
         break;
       case "about":
-        // window.location.href = "/html/rooms.html";
+        window.location.href = "/html/AboutPage.html";
         break;
       case "rooms":
         window.location.href = "/html/rooms.html";
@@ -17,7 +17,7 @@ navBarLi.forEach((a) => {
         window.location.href = "/html/contact.html";
         break;
       case "blog":
-        // window.location.href = "/html/rooms.html";
+        window.location.href = "/html/BlogsPage.html";
         break;
       case "contact":
         window.location.href = "/html/contact.html";

@@ -49,4 +49,4 @@ function changeImgEachTenS() {
     }
   }
 }
-setInterval(changeImgEachTenS, 3000);
+setInterval(changeImgEachTenS, 10000);
